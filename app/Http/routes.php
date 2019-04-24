@@ -12,5 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+Route::get('destination', function () {
+    return view('frontend.destination');
+});
+Route::get('about', function () {
+    return view('frontend.about');
+});
+Route::get('blog', function () {
+    return view('frontend.blog');
+});
+Route::get('booking', function () {
+    return view('frontend.booking');
+});
+Route::get('contact', function () {
+    return view('frontend.contact');
+});
+Route::get('discount', function () {
+    return view('frontend.discount');
 });

@@ -54,6 +54,6 @@ class CreateSpesifikasi extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('spesifikasi');
     }
 }

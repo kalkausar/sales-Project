@@ -18,7 +18,6 @@ class CreateKontak extends Migration
       $table->string('fax',15);
       $table->string('email')->unique();
       $table->string('whatsapp_no',15);
-      $table->string('fax',15);
       });
     }
 
@@ -29,6 +28,6 @@ class CreateKontak extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('kontak');
     }
 }

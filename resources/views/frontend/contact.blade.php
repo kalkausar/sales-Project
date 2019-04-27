@@ -9,7 +9,7 @@
 
             <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
               <h1 class="text-white font-weight-light">Get In Touch</h1>
-              <div><a href="index.html">Home</a> <span class="mx-2 text-white">&bullet;</span> <span class="text-white">Contact</span></div>
+              <div><a href="/">Home</a> <span class="mx-2 text-white">&bullet;</span> <span class="text-white">Contact</span></div>
 
             </div>
           </div>

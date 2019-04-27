@@ -32,3 +32,11 @@ Route::get('contact', function () {
 Route::get('discount', function () {
     return view('frontend.discount');
 });
+Route::get('admin', function () {
+    return view('admin.index2');
+});
+
+// Authentication routes...
+Route::get('moshimoshi', 'Auth\AuthController@getLogin');
+Route::post('moshimoshi', 'Auth\AuthController@postLogin');
+Route::get('logout', 'Auth\AuthController@getLogout');

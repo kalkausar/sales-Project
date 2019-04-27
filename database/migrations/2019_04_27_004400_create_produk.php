@@ -12,9 +12,11 @@ class CreateProduk extends Migration
      */
     public function up()
     {
+      Schema::create('produk', function (Blueprint $table) {
       $table->increments('id_produk');
       $table->string('nama_produk',55);
       $table->string('deskripsi');
+      });
     }
 
     /**

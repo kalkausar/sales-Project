@@ -12,7 +12,7 @@ class CreateSpesifikasi extends Migration
      */
     public function up()
     {
-      Schema::create('spesifikasi', function (Blueprint $table) {
+      Schema::create('tb_spesifikasi', function (Blueprint $table) {
           $table->increments('id_spec_produk');
           $table->string('tipe_mesin',55);
           $table->integer('isi_silinder');

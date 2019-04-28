@@ -26,6 +26,6 @@ class CreateKontak extends Migration
      */
     public function down()
     {
-        Schema::drop('kontak');
+        Schema::drop('tb_kontak');
     }
 }

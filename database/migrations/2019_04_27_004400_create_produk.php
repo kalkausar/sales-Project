@@ -15,6 +15,7 @@ class CreateProduk extends Migration
       Schema::create('tb_produk', function (Blueprint $table) {
       $table->increments('id_produk');
       $table->string('nama_produk',55);
+      $table->string('image_produk');
       $table->string('deskripsi');
       });
     }
@@ -26,6 +27,6 @@ class CreateProduk extends Migration
      */
     public function down()
     {
-    Schema::drop('produk');
+    Schema::drop('tb_produk');
     }
 }

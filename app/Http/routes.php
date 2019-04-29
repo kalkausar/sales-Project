@@ -40,3 +40,5 @@ Route::get('admin', function () {
 Route::get('moshimoshi', 'Auth\AuthController@getLogin');
 Route::post('moshimoshi', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@getLogout');
+
+Route::post('moshimoshi/postLogin','Auth\AuthController@postLogin');

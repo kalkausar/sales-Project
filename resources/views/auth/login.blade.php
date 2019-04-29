@@ -14,14 +14,15 @@
   <div class="card col-lg-6 col-md-6 m-auto">
     <div class="card-body">
       <h3 class="text-center">Login Admin</h3> <br>
-      <form>
+      <form action="/moshimoshi/postLogin" method="post">
+        {{csrf_field()}}
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input name="inputEmailLogin" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Password</label>
-          <input name="inputPasswordLogin" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
       </form>

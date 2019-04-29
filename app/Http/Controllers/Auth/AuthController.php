@@ -7,6 +7,9 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Auth;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class AuthController extends Controller
 {
@@ -61,5 +64,19 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
     }
+    public function postLogin(Request $request){
+      if (Auth::attempt ([
+        'email'=> $request->email,
+        'password'=> $request->password
+      ]))
+      {
+        return view('admin.index2');
+      }
+      else{
+        return Redirect::back();
+            }
+
+}
 }

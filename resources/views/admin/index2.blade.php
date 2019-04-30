@@ -20,7 +20,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{url('cssadmin/dist/css/skins/_all-skins.min.css')}}">
-
+  <!-- CkEditor TextArea -->
+  <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -89,42 +90,23 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
-          <li class="active treeview menu-open">
-            <a href="#">
-              <i class="fa fa-dashboard"></i> <span>Dashboard</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-              <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-            </ul>
-          </li>
+          <li><a href="/slider"><i class="fa fa-sliders"></i> <span>Slider</span></a></li>
+          <li><a href="/produk"><i class="fa fa-car"></i> <span>Produk</span></a></li>
+          <li><a href="/spek"><i class="fa fa-server"></i> <span>Spesifikasi</span></a></li>
+          <li><a href="/about"><i class="fa fa-book"></i> <span>About</span></a></li>
+          <li><a href="/contactAdmin"><i class="fa fa-address-card"></i> <span>Contact</span></a></li>
+          <li><a href="/testi"><i class="fa fa-comments"></i> <span>Testimoni</span></a></li>
         </ul>
       </section>
       <!-- /.sidebar -->
     </aside>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-      <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Dashboard
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Dashboard</li>
-        </ol>
-      </section>
-
-      <!-- Main content -->
-      <section class="content">
-      </section>
-      <!-- /.content -->
-    </div>
-    <!-- /.content-wrapper -->
+    @yield('slider')
+    @yield('produk')
+    @yield('spek')
+    @yield('about')
+    @yield('contactAdmin')
+    @yield('testi')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

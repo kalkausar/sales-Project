@@ -1,4 +1,4 @@
-@extends('admin.index2')
+@extends('admin.templateAdmin')
 @section('about')
 
 <!-- Content Wrapper. Contains page content -->
@@ -41,10 +41,18 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <textarea name="AboutTextArea"></textarea>
-                <script>
-                        CKEDITOR.replace( 'AboutTextArea' );
-                </script>
+            <div class="form-group">
+              <label>Gambar About</label>
+              <input type="file" class="custom-file-input" id="customFile">
+            </div>
+            <div class="form-group">
+              <label>Kontent About</label>
+              <textarea name="AboutTextArea"></textarea>
+              <script>
+                CKEDITOR.replace('AboutTextArea');
+              </script>
+            </div>
+            <a role="button" class="btn btn-primary">Save</a>
           </div>
           <!-- ./box-body -->
         </div>

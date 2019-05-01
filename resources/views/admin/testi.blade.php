@@ -1,4 +1,4 @@
-@extends('admin.index2')
+@extends('admin.templateAdmin')
 @section('testi')
 
 <!-- Content Wrapper. Contains page content -->

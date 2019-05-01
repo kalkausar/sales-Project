@@ -101,18 +101,19 @@
       <!-- /.sidebar -->
     </aside>
 
-    @yield('slider')
+    @yield('home')
     @yield('produk')
     @yield('spek')
     @yield('about')
     @yield('contactAdmin')
     @yield('testi')
+    @yield('createProduk')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">
         <b>Version</b> 2.4.0
       </div>
-      <strong>Copyright &copy; 2019 <a href="https://adminlte.io">Project Ceunah Team</a>.</strong> All rights
+      <strong>Copyright &copy; 2019 <a href="https://adminlte.io" style="color:#3c8dbc">Project Ceunah Team</a>.</strong> All rights
       reserved.
     </footer>
   </div>

@@ -1,4 +1,4 @@
-@extends('admin.index2')
+@extends('admin.templateAdmin')
 @section('produk')
 
 <!-- Content Wrapper. Contains page content -->
@@ -41,7 +41,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <button type="button" class="btn btn-success " href="#"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Produk</button>
+            <a class="btn btn-success" href="/createProduct" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Produk</a>
             <h3>Daftar Produk</h3>
             <table class="table table-striped">
               <thead>

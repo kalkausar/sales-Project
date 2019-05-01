@@ -1,4 +1,4 @@
-@extends('admin.index2')
+@extends('admin.templateAdmin')
 @section('contactAdmin')
 
 <!-- Content Wrapper. Contains page content -->
@@ -41,6 +41,27 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            <!-- text input phone -->
+            <div class="form-group">
+              <label>Telepon</label>
+              <input type="text" class="form-control" placeholder="Ex: 08xx xxxx xxxx">
+            </div>
+            <!-- text input fax -->
+            <div class="form-group">
+              <label>Fax</label>
+              <input type="text" class="form-control" placeholder="Ex: 021 xxxxx">
+            </div>
+            <!-- text input Email -->
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" class="form-control" placeholder="Ex: sales@mitsubishi.com">
+            </div>
+            <!-- text input Email -->
+            <div class="form-group">
+              <label>WhatsApp</label>
+              <input type="text" class="form-control" placeholder="Ex: 08xx xxxx xxxx">
+            </div>
+            <a role="button" class="btn btn-primary">Save</a>
           </div>
           <!-- ./box-body -->
         </div>

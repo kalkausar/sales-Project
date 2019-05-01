@@ -33,7 +33,7 @@ Route::get('discount', function () {
     return view('frontend.discount');
 });
 Route::get('admin', function () {
-    return view('admin.slider');
+    return view('admin.indexAdmin');
 });
 Route::get('produk', function () {
     return view('admin.produk');
@@ -49,6 +49,9 @@ Route::get('contactAdmin', function () {
 });
 Route::get('testi', function () {
     return view('admin.testi');
+});
+Route::get('createProduct', function () {
+    return view('admin.createProduk');
 });
 // Authentication routes...
 Route::get('moshimoshi', 'Auth\AuthController@getLogin');

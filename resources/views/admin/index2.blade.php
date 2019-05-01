@@ -90,7 +90,7 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
-          <li><a href="/slider"><i class="fa fa-sliders"></i> <span>Slider</span></a></li>
+          <li><a href="/admin"><i class="fa fa-sliders"></i> <span>Slider</span></a></li>
           <li><a href="/produk"><i class="fa fa-car"></i> <span>Produk</span></a></li>
           <li><a href="/spek"><i class="fa fa-server"></i> <span>Spesifikasi</span></a></li>
           <li><a href="/about"><i class="fa fa-book"></i> <span>About</span></a></li>

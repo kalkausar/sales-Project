@@ -33,16 +33,13 @@ Route::get('discount', function () {
     return view('frontend.discount');
 });
 Route::get('admin', function () {
-    return view('admin.index2');
+    return view('admin.slider');
 });
 Route::get('produk', function () {
     return view('admin.produk');
 });
 Route::get('spek', function () {
     return view('admin.spek');
-});
-Route::get('slider', function () {
-    return view('admin.slider');
 });
 Route::get('about', function () {
     return view('admin.about');

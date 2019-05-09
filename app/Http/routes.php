@@ -35,24 +35,35 @@ Route::get('discount', function () {
 Route::get('admin', function () {
     return view('admin.indexAdmin');
 });
-Route::get('produkPageAdmin', function () {
-    return view('admin.produk');
-});
+// Route::get('produkPageAdmin', function () {
+//     return view('admin.produk');
+// });
 Route::get('spekPageAdmin', function () {
     return view('admin.spek');
 });
-Route::get('aboutPageAdmin', function () {
-    return view('admin.about');
-});
-Route::get('contactPageAdmin', function () {
-    return view('admin.contact');
-});
+// Route::get('aboutPageAdmin', function () {
+//     return view('admin.about');
+// });
+// Route::get('contactPageAdmin', function () {
+//     return view('admin.contact');
+// });
 Route::get('testiPageAdmin', function () {
     return view('admin.testi');
 });
-Route::get('createProduct', function () {
-    return view('admin.createProduk');
-});
+// Route::get('createProduct', function () {
+//     return view('admin.createProduk');
+// });
+
+//ManageProduct
+Route::get('produkPageAdmin','ManageProductController@index');
+Route::get('produkPageAdmin/create','ManageProductController@create');
+
+//ManageAbout
+Route::get('aboutPageAdmin','ManageAboutController@index');
+
+//ManageContact
+Route::get('contactPageAdmin','ManageContactController@index');
+
 // Authentication routes...
 Route::get('moshimoshi', 'Auth\AuthController@getLogin');
 Route::post('moshimoshi', 'Auth\AuthController@postLogin');

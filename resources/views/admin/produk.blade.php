@@ -41,7 +41,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <a class="btn btn-success" href="/createProduct" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Produk</a>
+            <a class="btn btn-success" href="produkPageAdmin/create" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Produk</a>
             <h3>Daftar Produk</h3>
             <table class="table table-striped">
               <thead>

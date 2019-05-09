@@ -91,11 +91,11 @@
         <ul class="sidebar-menu" data-widget="tree">
           <li class="header">MAIN NAVIGATION</li>
           <li><a href="/admin"><i class="fa fa-sliders"></i> <span>Slider</span></a></li>
-          <li><a href="/produk"><i class="fa fa-car"></i> <span>Produk</span></a></li>
-          <li><a href="/spek"><i class="fa fa-server"></i> <span>Spesifikasi</span></a></li>
-          <li><a href="/about"><i class="fa fa-book"></i> <span>About</span></a></li>
-          <li><a href="/contactAdmin"><i class="fa fa-address-card"></i> <span>Contact</span></a></li>
-          <li><a href="/testi"><i class="fa fa-comments"></i> <span>Testimoni</span></a></li>
+          <li><a href="/produkPageAdmin"><i class="fa fa-car"></i> <span>Produk</span></a></li>
+          <li><a href="/spekPageAdmin"><i class="fa fa-server"></i> <span>Spesifikasi</span></a></li>
+          <li><a href="/aboutPageAdmin"><i class="fa fa-book"></i> <span>About</span></a></li>
+          <li><a href="/contactPageAdmin"><i class="fa fa-address-card"></i> <span>Contact</span></a></li>
+          <li><a href="/testiPageAdmin"><i class="fa fa-comments"></i> <span>Testimoni</span></a></li>
         </ul>
       </section>
       <!-- /.sidebar -->

@@ -35,19 +35,19 @@ Route::get('discount', function () {
 Route::get('admin', function () {
     return view('admin.indexAdmin');
 });
-Route::get('produk', function () {
+Route::get('produkPageAdmin', function () {
     return view('admin.produk');
 });
-Route::get('spek', function () {
+Route::get('spekPageAdmin', function () {
     return view('admin.spek');
 });
-Route::get('about', function () {
+Route::get('aboutPageAdmin', function () {
     return view('admin.about');
 });
-Route::get('contactAdmin', function () {
+Route::get('contactPageAdmin', function () {
     return view('admin.contact');
 });
-Route::get('testi', function () {
+Route::get('testiPageAdmin', function () {
     return view('admin.testi');
 });
 Route::get('createProduct', function () {

@@ -20,7 +20,7 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Slider</h3>
+            <h3 class="box-title">Manage Slider</h3>
 
             <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -41,6 +41,45 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            <a class="btn btn-success" href="/createProduct" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Slider</a>
+            <h3>Daftar Slider</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Nama Slider</th>
+                  <th scope="col">Deskripsi</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><span class="label label-primary" href="#">Edit</span></td>
+                  <td><span class="label label-danger" href="#">Delete</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><span class="label label-primary" href="#">Edit</span></td>
+                  <td><span class="label label-danger" href="#">Delete</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><span class="label label-primary" href="#">Edit</span></td>
+                  <td><span class="label label-danger" href="#">Delete</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!-- ./box-body -->
         </div>

@@ -108,6 +108,7 @@
     @yield('contactAdmin')
     @yield('testi')
     @yield('createProduk')
+    @yield('createSlider')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

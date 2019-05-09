@@ -1,17 +1,17 @@
 @extends('admin.templateAdmin')
-@section('createProduk')
+@section('createSlider')
 
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Tambah Produk
+      Tambah Slider
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#"><i class="fa fa-car"></i> Produk</a></li>
-      <li class="active">Tambah Produk</li>
+      <li><a href="#"><i class="fa fa-car"></i> Slider</a></li>
+      <li class="active">Tambah Slider</li>
     </ol>
   </section>
 
@@ -21,7 +21,7 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Create Product Page</h3>
+            <h3 class="box-title">Add Slider Page</h3>
 
             <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -42,15 +42,15 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <!-- text input -->
+            <!-- IMG SLIDER -->
             <div class="form-group">
-              <label>Nama Produk</label>
-              <input type="text" class="form-control" placeholder="Ex: Mitsubishi Expander">
+              <label>Gambar Slider</label>
+              <input type="file" class="custom-file-input" id="customFile">
             </div>
             <!-- textarea -->
             <div class="form-group">
-              <label>Deskripsi</label>
-              <textarea class="form-control" rows="3" placeholder="Deskripsi produk"></textarea>
+              <label>Slider Text</label>
+              <textarea class="form-control" rows="3" placeholder="Slider Text"></textarea>
             </div>
             <button type="button" class="btn btn-primary">Submit</a></button>
           </div>

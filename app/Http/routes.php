@@ -53,6 +53,9 @@ Route::get('testiPageAdmin', function () {
 // Route::get('createProduct', function () {
 //     return view('admin.createProduk');
 // });
+Route::get('createSlider', function () {
+    return view('admin.createSlider');
+});
 
 //ManageProduct
 Route::get('produkPageAdmin','ManageProductController@index');

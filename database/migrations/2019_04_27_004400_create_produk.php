@@ -12,11 +12,11 @@ class CreateProduk extends Migration
      */
     public function up()
     {
-      Schema::create('tb_produk', function (Blueprint $table) {
-      $table->increments('id_produk');
-      $table->string('nama_produk',55);
-      $table->string('image_produk');
-      $table->string('deskripsi');
+      Schema::create('tb_product', function (Blueprint $table) {
+      $table->increments('product_id');
+      $table->string('product_name',55);
+      $table->string('product_image');
+      $table->string('product_desc');
       $table->timestamps();
       $table->softDeletes();
       });

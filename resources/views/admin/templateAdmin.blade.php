@@ -58,13 +58,13 @@
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="{{url('cssadmin/dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs">{{Session::get('name')}}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <a class="dropdown-item" href="#">Edit Profile</a>
-                  <a class="dropdown-item" href="#">Logout</a>
+                  <a class="dropdown-item" href="/logout">Logout</a>
                 </li>
               </ul>
             </li>
@@ -83,7 +83,7 @@
             <img src="{{url('cssadmin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>Alexander Pierce</p>
+            <p>{{Session::get('name')}}</p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>

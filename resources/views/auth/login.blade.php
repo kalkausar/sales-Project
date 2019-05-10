@@ -14,18 +14,28 @@
   <div class="card col-lg-6 col-md-6 m-auto">
     <div class="card-body">
       <h3 class="text-center">Login Admin</h3> <br>
-      <form action="/moshimoshi/postLogin" method="post">
-        {{csrf_field()}}
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-      </form>
+      @if(\Session::has('alert'))
+      <div class="alert alert-danger">
+        <div>{{Session::get('alert')}}</div>
+      </div>
+      @endif
+      @if(\Session::has('alert-success'))
+      <div class="alert alert-success">
+        <div>{{Session::get('alert-success')}}</div>
+      </div>
+      @endif
+        <form action="/moshimoshi/postLogin" method="post">
+          {{csrf_field()}}
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input name="email" type="email" class="form-control" id="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
     </div>
   </div>
   <!-- Optional JavaScript -->

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\ManageProduct;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -37,7 +37,16 @@ class ManageProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $manages = new ManageProduct;
+      $manages->nama_produk = $request->nama_produk;
+      $manages->deskripsi = $request->deskripsi;
+      // $manages->id_category = 1;
+      // $manages->status = 1;
+      // $manages->slug = str_slug($request->title);
+      // $manages->keyword = $request->keyword;
+      $manages->save();
+
+      return redirect('produkPageAdmin')->with('message','data berhasil ditambahkan!!');
     }
 
     /**

@@ -4,6 +4,7 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
+  <form action="/addproduct" method="post">
   <section class="content-header">
     <h1>
       Tambah Produk
@@ -22,8 +23,8 @@
         <div class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Create Product Page</h3>
-
-            <div class="box-tools pull-right">
+{{csrf_field()}}
+            <!-- <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
               </button>
               <div class="btn-group">
@@ -38,21 +39,21 @@
                 </ul>
               </div>
               <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-            </div>
+            </div> -->
           </div>
           <!-- /.box-header -->
           <div class="box-body">
             <!-- text input -->
             <div class="form-group">
               <label>Nama Produk</label>
-              <input type="text" class="form-control" placeholder="Ex: Mitsubishi Expander">
+              <input type="text" class="form-control" name=nama_produk id=nama_produk placeholder="Ex: Mitsubishi Expander">
             </div>
             <!-- textarea -->
             <div class="form-group">
               <label>Deskripsi</label>
-              <textarea class="form-control" rows="3" placeholder="Deskripsi produk"></textarea>
+              <textarea class="form-control" rows="3" name=deskripsi id=deskripsi placeholder="Deskripsi produk"></textarea>
             </div>
-            <button type="button" class="btn btn-primary">Submit</a></button>
+            <button class="btn btn-primary" type="submit" id="" >Submit</a></button>
           </div>
           <!-- ./box-body -->
         </div>

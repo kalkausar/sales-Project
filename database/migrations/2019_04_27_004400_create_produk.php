@@ -17,6 +17,8 @@ class CreateProduk extends Migration
       $table->string('nama_produk',55);
       $table->string('image_produk');
       $table->string('deskripsi');
+      $table->timestamps();
+      $table->softDeletes();
       });
     }
 

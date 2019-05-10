@@ -60,6 +60,7 @@ Route::get('createSlider', function () {
 //ManageProduct
 Route::get('produkPageAdmin','ManageProductController@index');
 Route::get('produkPageAdmin/create','ManageProductController@create');
+Route::post('addproduct','ManageProductController@store');
 
 //ManageAbout
 Route::get('aboutPageAdmin','ManageAboutController@index');

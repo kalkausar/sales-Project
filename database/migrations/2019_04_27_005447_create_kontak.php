@@ -13,9 +13,10 @@ class CreateKontak extends Migration
     public function up()
     {
       Schema::create('tb_contact', function (Blueprint $table) {
-      $table->increments('contact_user');
+      $table->increments('contact_id');
       $table->string('contact_name',50);
-      $table->string('contact_desc');
+      $table->string('contact_type',50);
+      $table->string('contact_desc',50);
       });
     }
 

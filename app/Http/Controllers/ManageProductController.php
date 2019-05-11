@@ -41,12 +41,12 @@ class ManageProductController extends Controller
       if ($request->hasFile('tes')) {
          $namafile = $request->file('tes')->getClientOriginalName();
          $ext = $request->file('tes')->getClientOriginalExtension();
-         $lokasifileskr = '/photos/'.$namafile;
+         $lokasifileskr = '/photosProduct/'.$namafile;
          //cek jika file sudah ada...
          if ($ext == "png" ||
              $ext == "jpg")
          {
-           $destinasi = public_path('/photos');
+           $destinasi = public_path('/photosProduct');
            $proses = $request->file('tes')->move($destinasi,$namafile);
 
 

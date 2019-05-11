@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\ManageSlider;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class ManageSliderController extends Controller
 {
@@ -26,7 +28,10 @@ class ManageSliderController extends Controller
      */
     public function create()
     {
-        return view('admin.createSlider');
+      if(!Session::get('login')){
+          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+      }
+      return view('admin.createSlider');
     }
 
     /**

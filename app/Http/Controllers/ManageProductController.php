@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\ManageProduct;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class ManageProductController extends Controller
 {
@@ -16,6 +18,9 @@ class ManageProductController extends Controller
      */
      public function index()
    {
+     if(!Session::get('login')){
+         return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+     }
      $manages = ManageProduct::all();
      return view('admin.produk', ['manages'=>$manages]);
    }
@@ -27,7 +32,10 @@ class ManageProductController extends Controller
      */
      public function create()
      {
-         return view('admin.createProduk');
+       if(!Session::get('login')){
+           return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+       }
+       return view('admin.createProduk');
      }
 
     /**

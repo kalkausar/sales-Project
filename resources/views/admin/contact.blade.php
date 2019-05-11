@@ -24,27 +24,43 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <!-- text input phone -->
-            <div class="form-group">
-              <label>Telepon</label>
-              <input type="text" class="form-control" placeholder="Ex: 08xx xxxx xxxx">
-            </div>
-            <!-- text input fax -->
-            <div class="form-group">
-              <label>Fax</label>
-              <input type="text" class="form-control" placeholder="Ex: 021 xxxxx">
-            </div>
-            <!-- text input Email -->
-            <div class="form-group">
-              <label>Email</label>
-              <input type="text" class="form-control" placeholder="Ex: sales@mitsubishi.com">
-            </div>
-            <!-- text input Email -->
-            <div class="form-group">
-              <label>WhatsApp</label>
-              <input type="text" class="form-control" placeholder="Ex: 08xx xxxx xxxx">
-            </div>
-            <a role="button" class="btn btn-primary">Save</a>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">No.</th>
+                  <th scope="col">Nama Slider</th>
+                  <th scope="col">Deskripsi</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><span class="label label-primary" href="#">Edit</span></td>
+                  <td><span class="label label-danger" href="#">Delete</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><span class="label label-primary" href="#">Edit</span></td>
+                  <td><span class="label label-danger" href="#">Delete</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><span class="label label-primary" href="#">Edit</span></td>
+                  <td><span class="label label-danger" href="#">Delete</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!-- ./box-body -->
         </div>

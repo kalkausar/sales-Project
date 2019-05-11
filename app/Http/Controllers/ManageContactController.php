@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class ManageContactController extends Controller
 {
@@ -16,7 +18,10 @@ class ManageContactController extends Controller
      */
     public function index()
     {
-        return view('admin.contact');
+      if(!Session::get('login')){
+          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+      }
+      return view('admin.contact');
     }
 
     /**

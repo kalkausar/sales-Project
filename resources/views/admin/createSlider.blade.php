@@ -31,6 +31,11 @@
               <label> <b>*Hanya gambar yang dapat dimasukkan </b> </label> <br>
               <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes" name="tes">
             </div>
+            <!-- text input -->
+            <div class="form-group">
+              <label>Nama Slider</label>
+              <input type="text" class="form-control" name=slider_name id=slider_name placeholder="Ex: Slider Expander">
+            </div>
             <!-- textarea -->
             <div class="form-group">
               <label>Slider Text</label>

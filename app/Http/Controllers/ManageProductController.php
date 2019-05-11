@@ -38,17 +38,34 @@ class ManageProductController extends Controller
      */
     public function store(Request $request)
     {
-      $manages = new ManageProduct;
-      $manages->product_name = $request->product_name;
-      $manages->product_desc = $request->product_desc;
-      // $manages->id_category = 1;
-      // $manages->status = 1;
-      // $manages->slug = str_slug($request->title);
-      // $manages->keyword = $request->keyword;
-      $manages->save();
+      if ($request->hasFile('tes')) {
+         $namafile = $request->file('tes')->getClientOriginalName();
+         $ext = $request->file('tes')->getClientOriginalExtension();
+         $lokasifileskr = '/photos/'.$namafile;
+         //cek jika file sudah ada...
+         if ($ext == "png" ||
+             $ext == "jpg")
+         {
+           $destinasi = public_path('/photos');
+           $proses = $request->file('tes')->move($destinasi,$namafile);
+
+
+          $manages = new ManageProduct;
+          $manages->product_name = $request->product_name;
+          $manages->product_desc = $request->product_desc;
+          $manages->product_image = $lokasifileskr;
+          // $manages->id_category = 1;
+          // $manages->status = 1;
+          // $manages->slug = str_slug($request->title);
+          // $manages->keyword = $request->keyword;
+          $manages->save();
 
       return redirect('produkPageAdmin')->with('message','data berhasil ditambahkan!!');
-    }
+    } else {
+             return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+           }
+         }
+       }
 
     /**
      * Display the specified resource.

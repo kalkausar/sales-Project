@@ -4,7 +4,7 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-  <form action="/addproduct" method="post">
+  <form action="/addproduct" enctype="multipart/form-data" method="post">
   <section class="content-header">
     <h1>
       Tambah Produk
@@ -43,6 +43,11 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            <div class="form-group">
+          		<label> Image </label> <br>
+          		<label> <b>*Hanya gambar yang dapat dimasukkan </b> </label> <br>
+          	  <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes" name="tes">
+          	</div>
             <!-- text input -->
             <div class="form-group">
               <label>Nama Produk</label>

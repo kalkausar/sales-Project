@@ -46,12 +46,12 @@
             <!-- text input -->
             <div class="form-group">
               <label>Nama Produk</label>
-              <input type="text" class="form-control" name=nama_produk id=nama_produk placeholder="Ex: Mitsubishi Expander">
+              <input type="text" class="form-control" name=product_name id=product_name placeholder="Ex: Mitsubishi Expander">
             </div>
             <!-- textarea -->
             <div class="form-group">
               <label>Deskripsi</label>
-              <textarea class="form-control" rows="3" name=deskripsi id=deskripsi placeholder="Deskripsi produk"></textarea>
+              <textarea class="form-control" rows="3" name=product_desc id=product_desc placeholder="Deskripsi produk"></textarea>
             </div>
             <button class="btn btn-primary" type="submit" id="" >Submit</a></button>
           </div>

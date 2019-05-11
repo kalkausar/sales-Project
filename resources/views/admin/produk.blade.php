@@ -20,7 +20,7 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Mange Produk</h3>
+            <h3 class="box-title">Manage Produk</h3>
 
             <div class="box-tools pull-right">
               <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -54,30 +54,16 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($manages as $manage)
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
+                  <th scope="row">{{$manage->product_id}}</th>
+                  <td>{{$manage->product_name}}</td>
+                  <td>{{$manage->product_desc}}</td>
                   <td><span class="label label-default">Aktif</span></td>
                   <td><span class="label label-primary" href="#">Edit</span></td>
                   <td><span class="label label-danger" href="#">Delete</span></td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

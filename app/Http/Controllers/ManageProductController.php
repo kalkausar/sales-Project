@@ -16,7 +16,8 @@ class ManageProductController extends Controller
      */
      public function index()
    {
-       return view('admin.produk');
+     $manages = ManageProduct::all();
+     return view('admin.produk', ['manages'=>$manages]);
    }
 
     /**
@@ -38,8 +39,8 @@ class ManageProductController extends Controller
     public function store(Request $request)
     {
       $manages = new ManageProduct;
-      $manages->nama_produk = $request->nama_produk;
-      $manages->deskripsi = $request->deskripsi;
+      $manages->product_name = $request->product_name;
+      $manages->product_desc = $request->product_desc;
       // $manages->id_category = 1;
       // $manages->status = 1;
       // $manages->slug = str_slug($request->title);

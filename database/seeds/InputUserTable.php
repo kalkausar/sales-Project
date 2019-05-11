@@ -15,6 +15,11 @@ class InputUserTable extends Seeder
         'name' => 'GUCC',
         'email' => 'gucc@gmail.com',
         'password' => '$2y$10$TbdH.YaRm9rnssSjLlcrbeOGpsU5VeeBxWGBaIGKNaoqKAnoRUTUa',
-]);
+      ]);
+      DB::table('users')->insert([
+          'name' => 'Kal Kausar',
+          'email' => 'kalkausar98@gmail.com',
+          'password' => '$2y$10$TbdH.YaRm9rnssSjLlcrbeOGpsU5VeeBxWGBaIGKNaoqKAnoRUTUa',
+        ]);
     }
 }

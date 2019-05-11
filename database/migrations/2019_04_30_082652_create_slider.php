@@ -16,6 +16,8 @@ class CreateSlider extends Migration
           $table->increments('slider_id');
           $table->string('slider_image');
           $table->string('slider_text');
+          $table->timestamps();
+          $table->softDeletes();
         });
     }
 

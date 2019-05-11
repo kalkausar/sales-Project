@@ -24,7 +24,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <a class="btn btn-success" href="/createSlider" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Slider</a>
+            <a class="btn btn-success" href="sliderPageAdmin/createSlider" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Slider</a>
             <h3>Daftar Slider</h3>
             <table class="table table-striped">
               <thead>

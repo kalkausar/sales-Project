@@ -4,6 +4,7 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
+  <form action="/addslider" enctype="multipart/form-data" method="post">
   <section class="content-header">
     <h1>
       Tambah Slider
@@ -22,20 +23,20 @@
         <div class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Add Slider Page</h3>
+            {{csrf_field()}}
           </div>
-          <!-- /.box-header -->
           <div class="box-body">
-            <!-- IMG SLIDER -->
             <div class="form-group">
-              <label>Gambar Slider</label>
-              <input type="file" class="custom-file-input" id="customFile">
+              <label> Image </label> <br>
+              <label> <b>*Hanya gambar yang dapat dimasukkan </b> </label> <br>
+              <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes" name="tes">
             </div>
             <!-- textarea -->
             <div class="form-group">
               <label>Slider Text</label>
-              <textarea class="form-control" rows="3" placeholder="Slider Text"></textarea>
+              <textarea class="form-control" rows="3" placeholder="Slider Text" name="slider_text" id="slider_text"></textarea>
             </div>
-            <button type="button" class="btn btn-primary">Submit</a></button>
+              <button class="btn btn-primary" type="submit" id="">Submit</a></button>
           </div>
           <!-- ./box-body -->
         </div>

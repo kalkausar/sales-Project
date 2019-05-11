@@ -53,13 +53,18 @@ Route::get('testiPageAdmin', function () {
 // Route::get('createProduct', function () {
 //     return view('admin.createProduk');
 // });
-Route::get('createSlider', function () {
-    return view('admin.createSlider');
-});
+// Route::get('createSlider', function () {
+//     return view('admin.createSlider');
+// });
+
+//ManageSlider
+Route::get('sliderPageAdmin/createSlider','ManageSliderController@create');
+Route::post('addslider','ManageSliderController@store');
+
 
 //ManageProduct
 Route::get('produkPageAdmin','ManageProductController@index');
-Route::get('produkPageAdmin/create','ManageProductController@create');
+Route::get('produkPageAdmin/createProduct','ManageProductController@create');
 Route::post('addproduct','ManageProductController@store');
 
 //ManageAbout

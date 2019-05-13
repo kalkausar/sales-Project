@@ -58,9 +58,12 @@ Route::get('testiPageAdmin', function () {
 // });
 
 //ManageSlider
+Route::get('admin','ManageSliderController@index');
 Route::get('sliderPageAdmin/createSlider','ManageSliderController@create');
 Route::post('addslider','ManageSliderController@store');
-
+Route::get('admin/{id}','ManageSliderController@edit');
+Route::put('admin/{id}/edit','ManageSliderController@update');
+Route::put('deleteslider/{id}/','ManageSliderController@destroy');
 
 //ManageProduct
 Route::get('produkPageAdmin','ManageProductController@index');
@@ -80,6 +83,5 @@ Route::get('contactPageAdmin','ManageContactController@index');
 Route::get('moshimoshi', 'Auth\AuthController@getLogin');
 Route::post('moshimoshi', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@logout');
-Route::get('admin', 'Auth\AuthController@index');
 
 Route::post('moshimoshi/postLogin','Auth\AuthController@postLogin');

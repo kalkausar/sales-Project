@@ -99,7 +99,6 @@ class ManageProductController extends Controller
           return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
       }
       $manages = ManageProduct::find($id);
-
       return view('admin.editProduk', ['manages'=>$manages]);
     }
 

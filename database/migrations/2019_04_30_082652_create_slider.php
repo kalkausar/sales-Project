@@ -13,7 +13,8 @@ class CreateSlider extends Migration
     public function up()
     {
         Schema::create('tb_slider', function (Blueprint $table) {
-          $table->increments('slider_id');
+          $table->increments('id');
+          $table->string('slider_name');
           $table->string('slider_image');
           $table->string('slider_text');
           $table->timestamps();

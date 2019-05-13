@@ -29,7 +29,7 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col">No.</th>
+                  <th scope="col">Id</th>
                   <th scope="col">Nama Slider</th>
                   <th scope="col">Deskripsi</th>
                   <th scope="col">Status</th>
@@ -37,30 +37,20 @@
                 </tr>
               </thead>
               <tbody>
+                @foreach ($manages as $manage)
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
+                  <th scope="row">{{$manage->id}}</th>
+                  <td>{{$manage->slider_name}}</td>
+                  <td>{{$manage->slider_name}}</td>
                   <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
+                  <td><a class="label label-primary" href="/admin/{{$manage->id}}">Edit</a></td>
+                  <form class="" action="/deleteslider/{{$manage->id}}" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="_method" value="put">
+                  <td><button class="btn btn-block btn-danger btn-xs" style="width:30%" type="submit" name="name">Delete</button></td>
+                </form>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

@@ -47,7 +47,7 @@
                   <form class="" action="/deleteproduct/{{$manage->id}}" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="_method" value="put">
-                  <td><button class="btn btn-block btn-danger" style="width:30%; height:60%" type="submit" name="name">Delete</button></td>
+                  <td><button class="btn btn-block btn-danger btn-xs" style="width:30%" type="submit" name="name">Delete</button></td>
                 </form>
                 </tr>
                 @endforeach

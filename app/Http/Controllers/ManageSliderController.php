@@ -18,7 +18,11 @@ class ManageSliderController extends Controller
      */
     public function index()
     {
-        //
+      if(!Session::get('login')){
+          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+      }
+      $manages = ManageSlider::all();
+      return view('admin.indexAdmin', ['manages'=>$manages]);
     }
 
     /**
@@ -55,6 +59,7 @@ class ManageSliderController extends Controller
 
 
           $manages = new ManageSlider;
+          $manages->slider_name = $request->slider_name;
           $manages->slider_text = $request->slider_text;
           $manages->slider_image = $lokasifileskr;
           // $manages->id_category = 1;
@@ -89,7 +94,11 @@ class ManageSliderController extends Controller
      */
     public function edit($id)
     {
-        //
+      if(!Session::get('login')){
+          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+      }
+      $manages = ManageSlider::find($id);
+      return view('admin.editSlider', ['manages'=>$manages]);
     }
 
     /**
@@ -101,7 +110,12 @@ class ManageSliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $manages = ManageSlider::find($id);
+      $manages->slider_name = $request->slider_name;
+      $manages->slider_text = $request->slider_text;
+
+      $manages->save();
+      return redirect('admin')->with('message','data berhasil ditambahkan!!');
     }
 
     /**
@@ -112,6 +126,8 @@ class ManageSliderController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $manages = ManageSlider::find($id);
+      $manages->delete();
+      return redirect('admin')->with('message','data berhasil didelete!!');
     }
 }

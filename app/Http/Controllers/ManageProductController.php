@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ManageProduct;
 use App\Http\Requests;
+use DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
@@ -94,7 +95,12 @@ class ManageProductController extends Controller
      */
     public function edit($id)
     {
-        //
+      if(!Session::get('login')){
+          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
+      }
+      $manages = ManageProduct::find($id);
+
+      return view('admin.editProduk', ['manages'=>$manages]);
     }
 
     /**
@@ -106,7 +112,15 @@ class ManageProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $manages = ManageProduct::find($id);
+      $manages->product_name = $request->product_name;
+      $manages->product_desc = $request->product_desc;
+      // $manages->id_category = 1;
+      // $manages->status = 1;
+      // $manages->slug = str_slug($request->title);
+      // $manages->keyword = $request->keyword;
+      $manages->save();
+      return redirect('produkPageAdmin')->with('message','data berhasil diupdate!!');
     }
 
     /**
@@ -117,6 +131,8 @@ class ManageProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $manages = ManageProduct::find($id);
+      $manages->delete();
+      return redirect('produkPageAdmin')->with('message','data berhasil didelete!!');
     }
 }

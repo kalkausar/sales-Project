@@ -13,7 +13,7 @@ class CreateProduk extends Migration
     public function up()
     {
       Schema::create('tb_product', function (Blueprint $table) {
-      $table->increments('product_id');
+      $table->increments('id');
       $table->string('product_name',55);
       $table->string('product_image');
       $table->string('product_desc');

@@ -66,6 +66,9 @@ Route::post('addslider','ManageSliderController@store');
 Route::get('produkPageAdmin','ManageProductController@index');
 Route::get('produkPageAdmin/createProduct','ManageProductController@create');
 Route::post('addproduct','ManageProductController@store');
+Route::get('produkPageAdmin/{id}','ManageProductController@edit');
+Route::put('produkPageAdmin/{id}/edit','ManageProductController@update');
+Route::put('deleteproduct/{id}/','ManageProductController@destroy');
 
 //ManageAbout
 Route::get('aboutPageAdmin','ManageAboutController@index');

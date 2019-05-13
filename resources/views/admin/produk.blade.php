@@ -29,7 +29,7 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col">No.</th>
+                  <th scope="col">Id</th>
                   <th scope="col">Nama Produk</th>
                   <th scope="col">Deskripsi</th>
                   <th scope="col">Status</th>
@@ -39,12 +39,16 @@
               <tbody>
                 @foreach ($manages as $manage)
                 <tr>
-                  <th scope="row">{{$manage->product_id}}</th>
+                  <th scope="row">{{$manage->id}}</th>
                   <td>{{$manage->product_name}}</td>
                   <td>{{$manage->product_desc}}</td>
                   <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
+                  <td><a class="label label-primary" href="/produkPageAdmin/{{$manage->id}}">Edit</a></td>
+                  <form class="" action="/deleteproduct/{{$manage->id}}" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="_method" value="put">
+                  <td><button class="btn btn-block btn-danger" style="width:30%; height:60%" type="submit" name="name">Delete</button></td>
+                </form>
                 </tr>
                 @endforeach
               </tbody>

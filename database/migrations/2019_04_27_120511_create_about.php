@@ -13,8 +13,11 @@ class CreateAbout extends Migration
     public function up()
     {
       Schema::create('tb_about', function (Blueprint $table) {
+      $table->increments('id');
       $table->string('about_content');
       $table->string('about_image');
+      $table->timestamps();
+      $table->softDeletes();
       });
     }
 

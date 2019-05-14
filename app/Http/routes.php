@@ -57,6 +57,7 @@ Route::get('testiPageAdmin', function () {
 //     return view('admin.createSlider');
 // });
 
+
 //ManageSlider
 Route::get('admin','ManageSliderController@index');
 Route::get('sliderPageAdmin/createSlider','ManageSliderController@create');
@@ -74,7 +75,9 @@ Route::put('produkPageAdmin/{id}/edit','ManageProductController@update');
 Route::put('deleteproduct/{id}/','ManageProductController@destroy');
 
 //ManageAbout
-Route::get('aboutPageAdmin','ManageAboutController@index');
+Route::get('aboutPageAdmin','ManageAboutController@create');
+Route::post('addAbout','ManageAboutController@store');
+
 
 //ManageContact
 Route::get('contactPageAdmin','ManageContactController@index');

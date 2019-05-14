@@ -53,6 +53,7 @@
       <!-- /.row -->
     </section>
     <!-- /.content -->
+  </form>
 </div>
 <!-- /.row -->
 

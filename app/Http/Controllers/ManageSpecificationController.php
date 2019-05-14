@@ -55,7 +55,8 @@ class ManageSpecificationController extends Controller
       $manages->tipe_mesin = $request->tipe_mesin;
       $manages->isi_silinder = $request->isi_silinder;
       $manages->torsi = $request->torsi;
-      $manages->bahan_bakar = $request->bahan_bakar;
+      $manages->bahan_bakar_jenis = $request->bahan_bakar_jenis;
+      $manages->bahan_bakar_sistem = $request->bahan_bakar_sistem;
       $manages->kapasitas_tangki = $request->kapasitas_tangki;
       $manages->diameterXlangkah = $request->diameterXlangkah;
       $manages->dayaMax = $request->dayaMax;
@@ -127,7 +128,8 @@ class ManageSpecificationController extends Controller
       $manages->tipe_mesin = $request->tipe_mesin;
       $manages->isi_silinder = $request->isi_silinder;
       $manages->torsi = $request->torsi;
-      $manages->bahan_bakar = $request->bahan_bakar;
+      $manages->bahan_bakar_jenis = $request->bahan_bakar_jenis;
+      $manages->bahan_bakar_sistem = $request->bahan_bakar_sistem;
       $manages->kapasitas_tangki = $request->kapasitas_tangki;
       $manages->diameterXlangkah = $request->diameterXlangkah;
       $manages->dayaMax = $request->dayaMax;

@@ -18,7 +18,8 @@ class CreateSpesifikasi extends Migration
           $table->string('tipe_mesin',55);
           $table->integer('isi_silinder');
           $table->integer('torsi');
-          $table->integer('bahan_bakar');
+          $table->string('bahan_bakar_jenis');
+          $table->string('bahan_bakar_sistem');
           $table->integer('kapasitas_tangki');
           $table->string('diameterXlangkah',20);
           $table->string('dayaMax',15);

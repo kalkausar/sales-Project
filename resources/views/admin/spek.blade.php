@@ -20,18 +20,29 @@
       <div class="col-md-12">
         <div class="box">
           <div class="box-header with-border">
-            <h3 class="box-title">Ini Spek</h3>
+            <h3 class="box-title">Manage Spesifikasi</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            <a class="btn btn-success" href="createSpek" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Spesifikasi</a>
+            <h3>Spesifikasi</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Nama Produk</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Aksi</th>
+                </tr>
+              </thead>
+            </table>
+            <!-- ./box-body -->
           </div>
-          <!-- ./box-body -->
+          <!-- /.box -->
         </div>
-        <!-- /.box -->
+        <!-- /.col -->
       </div>
-      <!-- /.col -->
-    </div>
-    <!-- /.row -->
+      <!-- /.row -->
   </section>
   <!-- /.content -->
 </div>

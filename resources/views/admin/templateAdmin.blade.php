@@ -113,6 +113,7 @@
     @yield('editSlider')
     @yield('createSpek')
     @yield('editSpek')
+    @yield('404')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

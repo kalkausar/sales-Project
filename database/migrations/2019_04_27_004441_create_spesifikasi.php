@@ -13,7 +13,8 @@ class CreateSpesifikasi extends Migration
     public function up()
     {
       Schema::create('tb_specification', function (Blueprint $table) {
-          $table->increments('id_spec_product');
+          $table->increments('id');
+          $table->unsignedInteger('product_id')->nullable();
           $table->string('tipe_mesin',55);
           $table->integer('isi_silinder');
           $table->integer('torsi');
@@ -44,6 +45,9 @@ class CreateSpesifikasi extends Migration
           $table->string('sistem_rem',25);
           $table->string('sistem_penggerak',25);
           $table->timestamps();
+      });
+      Schema::table('tb_specification', function(Blueprint $table){
+        $table->foreign('product_id')->references('id')->on('tb_product')->onDelete('cascade')->onUpdate('cascade');
       });
     }
 

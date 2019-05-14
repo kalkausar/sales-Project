@@ -38,9 +38,9 @@ Route::get('discount', function () {
 // Route::get('produkPageAdmin', function () {
 //     return view('admin.produk');
 // });
-Route::get('spekPageAdmin', function () {
-    return view('admin.spek');
-});
+// Route::get('spekPageAdmin', function () {
+//     return view('admin.spek');
+// });
 // Route::get('aboutPageAdmin', function () {
 //     return view('admin.about');
 // });
@@ -48,15 +48,19 @@ Route::get('spekPageAdmin', function () {
 //     return view('admin.contact');
 // });
 Route::get('testiPageAdmin', function () {
-    return view('admin.testi');
+    return view('admin.404');
 });
 // Route::get('createProduct', function () {
 //     return view('admin.createProduk');
 // });
-// Route::get('createSlider', function () {
-//     return view('admin.createSlider');
-// });
 
+//ManageSpecification
+Route::get('spekPageAdmin','ManageSpecificationController@index');
+Route::get('spekPageAdmin/createSpecification','ManageSpecificationController@create');
+Route::post('addspec','ManageSpecificationController@store');
+Route::get('spekPageAdmin/{id}','ManageSpecificationController@edit');
+Route::put('spekPageAdmin/{id}/edit','ManageSpecificationController@update');
+Route::put('deletespec/{id}/','ManageSpecificationController@destroy');
 
 //ManageSlider
 Route::get('admin','ManageSliderController@index');
@@ -75,8 +79,10 @@ Route::put('produkPageAdmin/{id}/edit','ManageProductController@update');
 Route::put('deleteproduct/{id}/','ManageProductController@destroy');
 
 //ManageAbout
-Route::get('aboutPageAdmin','ManageAboutController@create');
+Route::get('aboutPageAdmin','ManageAboutController@index');
 Route::post('addAbout','ManageAboutController@store');
+Route::get('aboutPageAdmin/{id}','ManageAboutController@edit');
+Route::put('aboutPageAdmin/{id}/edit','ManageAboutController@update');
 
 
 //ManageContact

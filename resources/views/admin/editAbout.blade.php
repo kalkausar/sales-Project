@@ -25,27 +25,23 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col">Id</th>
-                  <th scope="col">About Content</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                @foreach ($manages as $manage)
-                <tr>
-                  <th scope="row">{{$manage->id}}</th>
-                  <td>{{$manage->about_content}}</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><a class="label label-primary" href="/aboutPageAdmin/{{$manage->id}}">Edit</a></td>
-                </form>
-                </tr>
-                @endforeach
-              </tbody>
-            </table>
+            <!-- input-->
+            <form class="" action="/aboutPageAdmin/{{$manages->id}}/edit" method="post">
+              {{csrf_field()}}
+              <div class="form-group">
+                <label>Gambar About</label>
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes" value="{{$manages->about_image}}" name="tes">
+              </div>
+              <div class="form-group">
+                <label>Konten About</label>
+                <textarea name="about_content">{{$manages->about_content}}</textarea>
+                <script>
+                  CKEDITOR.replace('about_content');
+                </script>
+              </div>
+              <input type="hidden" name="_method" value="put">
+              <button class="btn btn-primary" type="submit" id="">Save</a></button>
+              </form>
           </div>
           <!-- ./box-body -->
         </div>
@@ -56,7 +52,6 @@
     <!-- /.row -->
   </section>
   <!-- /.content -->
-</form>
 </div>
 <!-- /.row -->
 

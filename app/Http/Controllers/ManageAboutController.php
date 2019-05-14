@@ -23,7 +23,7 @@ class ManageAboutController extends Controller
           return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
       }
       $manages = ManageAbout::all();
-      return view('admin.about');
+      return view('admin.about', ['manages'=>$manages]);
     }
 
     /**
@@ -99,7 +99,7 @@ class ManageAboutController extends Controller
           return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
       }
       $manages = ManageAbout::find($id);
-      return view('admin.about', ['manages'=>$manages]);
+      return view('admin.editAbout', ['manages'=>$manages]);
     }
 
     /**
@@ -111,7 +111,16 @@ class ManageAboutController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $manages = ManageAbout::find($id);
+      $manages->about_content = $request->about_content;
+      // $manages->about_image = $request->about_image;
+      // $manages->id_category = 1;
+      // $manages->status = 1;
+      // $manages->slug = str_slug($request->title);
+      // $manages->keyword = $request->keyword;
+      $manages->save();
+
+      return redirect('aboutPageAdmin')->with('message','data berhasil ditambahkan!!');
     }
 
     /**

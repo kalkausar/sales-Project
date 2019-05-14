@@ -24,7 +24,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <a class="btn btn-success" href="createSpek" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Spesifikasi</a>
+            <a class="btn btn-success" href="spekPageAdmin/createSpecification" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Spesifikasi</a>
             <h3>Spesifikasi</h3>
             <table class="table table-striped">
               <thead>
@@ -35,6 +35,21 @@
                   <th scope="col">Aksi</th>
                 </tr>
               </thead>
+              <tbody>
+                @foreach ($manages as $manage)
+                <tr>
+                  <th scope="row">{{$manage->id}}</th>
+                  <td>{{$manage->product_name}}</td>
+                  <td><span class="label label-default">Aktif</span></td>
+                  <td><a class="label label-primary" href="/spekPageAdmin/{{$manage->id}}">Edit</a></td>
+                  <form class="" action="/deletespec/{{$manage->id}}" method="post">
+                    {{csrf_field()}}
+                    <input type="hidden" name="_method" value="put">
+                  <td><button class="btn btn-block btn-danger btn-xs" style="width:30%" type="submit" name="name">Delete</button></td>
+                </form>
+                </tr>
+                @endforeach
+              </tbody>
             </table>
             <!-- ./box-body -->
           </div>

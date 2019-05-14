@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\ManageContact;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
@@ -21,7 +21,9 @@ class ManageContactController extends Controller
       if(!Session::get('login')){
           return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
       }
-      return view('admin.contact');
+      $manages = ManageContact::all();
+      return view('admin.contact', ['manages'=>$manages]);
+      // return view('admin.contact');
     }
 
     /**
@@ -42,7 +44,7 @@ class ManageContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -64,7 +66,11 @@ class ManageContactController extends Controller
      */
     public function edit($id)
     {
-        //
+      $manages = ManageContact::find($id);
+      if(!$manages){
+          abort(503);
+      }
+      return view('admin.contactEdit')->with('manages',$manages);
     }
 
     /**
@@ -76,7 +82,13 @@ class ManageContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $manages = ManageContact::find($id);
+      $manages->contact_name = $request->contact_name;
+      $manages->contact_type = $request->contact_type;
+      $manages->contact_desc = $request->contact_desc;
+      $manages->save();
+
+      return redirect('contactPageAdmin')->with('message','data berhasil ditambahkan!!');
     }
 
     /**

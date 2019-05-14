@@ -28,37 +28,26 @@
               <thead>
                 <tr>
                   <th scope="col">No.</th>
-                  <th scope="col">Nama Slider</th>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Jenis</th>
                   <th scope="col">Deskripsi</th>
                   <th scope="col">Status</th>
                   <th scope="col">Aksi</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach ($manages as $manage)
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
+                  <th scope="row">{{$manage->id}}</th>
+                  <td>{{$manage->contact_name}}</td>
+                  <td>{{$manage->contact_type}}</td>
+                  <td>{{$manage->contact_desc}}</td>
                   <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
+                  <td>
+                    <a href="contactPageAdmin/{{  $manage->id }}/edit">
+                    <span class="label label-primary" >Edit</span></td>
                 </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td><span class="label label-default">Aktif</span></td>
-                  <td><span class="label label-primary" href="#">Edit</span></td>
-                  <td><span class="label label-danger" href="#">Delete</span></td>
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

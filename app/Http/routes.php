@@ -78,6 +78,8 @@ Route::get('aboutPageAdmin','ManageAboutController@index');
 
 //ManageContact
 Route::get('contactPageAdmin','ManageContactController@index');
+Route::get('contactPageAdmin/{id}/edit','ManageContactController@edit');
+Route::put('contactPageAdmin/{id}','ManageContactController@update');
 
 // Authentication routes...
 Route::get('moshimoshi', 'Auth\AuthController@getLogin');

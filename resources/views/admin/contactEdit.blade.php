@@ -24,27 +24,42 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <!-- text input phone -->
+            <form action="/contactPageAdmin/{{ $manages->id }}" method="post">
             <div class="form-group">
-              <label>Telepon</label>
-              <input type="text" class="form-control" placeholder="Ex: 08xx xxxx xxxx">
+              <label>Nama</label>
+              <input type="text" class="form-control" placeholder="Bambang" name="contact_name" value="{{ $manages->contact_name }}">
             </div>
-            <!-- text input fax -->
+
             <div class="form-group">
+              <label>Jenis</label>
+              <input type="text" class="form-control" placeholder="wa" name="contact_type" value="{{ $manages->contact_type }}">
+            </div>
+
+            <div class="form-group">
+              <label>Jenis</label>
+              <input type="text" class="form-control" placeholder="wa" name="contact_desc" value="{{ $manages->contact_desc }}">
+            </div>
+
+            <!-- text input fax -->
+            <!-- <div class="form-group">
               <label>Fax</label>
               <input type="text" class="form-control" placeholder="Ex: 021 xxxxx">
-            </div>
+            </div> -->
             <!-- text input Email -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label>Email</label>
               <input type="text" class="form-control" placeholder="Ex: sales@mitsubishi.com">
-            </div>
+            </div> -->
             <!-- text input Email -->
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label>WhatsApp</label>
               <input type="text" class="form-control" placeholder="Ex: 08xx xxxx xxxx">
-            </div>
-            <a role="button" class="btn btn-primary">Save</a>
+            </div> -->
+            <div class="form-group">
+          		<input type="hidden" name="_method" value="put">
+          		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+          		<button class="btn btn-success" type="submit" id="new"> Edit </button>
+          	</form>
           </div>
           <!-- ./box-body -->
         </div>

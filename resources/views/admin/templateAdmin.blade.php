@@ -111,6 +111,8 @@
     @yield('createSlider')
     @yield('editProduk')
     @yield('editSlider')
+    @yield('createSpek')
+    @yield('editSpek')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

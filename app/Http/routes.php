@@ -57,6 +57,7 @@ Route::get('testiPageAdmin', function () {
 //     return view('admin.createSlider');
 // });
 
+
 //ManageSlider
 Route::get('admin','ManageSliderController@index');
 Route::get('sliderPageAdmin/createSlider','ManageSliderController@create');

@@ -32,27 +32,7 @@ Route::get('contact', function () {
 Route::get('discount', function () {
     return view('frontend.discount');
 });
-// Route::get('admin', function () {
-//     return view('admin.indexAdmin');
-// });
-// Route::get('produkPageAdmin', function () {
-//     return view('admin.produk');
-// });
-// Route::get('spekPageAdmin', function () {
-//     return view('admin.spek');
-// });
-// Route::get('aboutPageAdmin', function () {
-//     return view('admin.about');
-// });
-// Route::get('contactPageAdmin', function () {
-//     return view('admin.contact');
-// });
-Route::get('testiPageAdmin', function () {
-    return view('admin.404');
-});
-// Route::get('createProduct', function () {
-//     return view('admin.createProduk');
-// });
+
 
 //ManageSpecification
 Route::get('spekPageAdmin','ManageSpecificationController@index');
@@ -84,6 +64,8 @@ Route::post('addAbout','ManageAboutController@store');
 Route::get('aboutPageAdmin/{id}','ManageAboutController@edit');
 Route::put('aboutPageAdmin/{id}/edit','ManageAboutController@update');
 
+//ManageTesti
+Route::get('testiPageAdmin','ManageTestiController@index');
 
 //ManageContact
 Route::get('contactPageAdmin','ManageContactController@index');

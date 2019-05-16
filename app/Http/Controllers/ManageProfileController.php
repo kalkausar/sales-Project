@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\User;
+use App\Http\Requests;
 use DB;
 use Auth;
 use Respond;
-use Illuminate\Http\Request;
-use App\ManageContact;
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
-class ManageContactController extends Controller
+class ManageProfileController extends Controller
 {
   public function getRoleAdmin() {
       $rolesyangberhak = DB::table('roles')->where('id','=','1')->first()->namaRule;
@@ -25,9 +25,7 @@ class ManageContactController extends Controller
   }
     public function index()
     {
-      $manages = ManageContact::all();
-      return view('admin.contact', ['manages'=>$manages]);
-      // return view('admin.contact');
+      //
     }
 
     /**
@@ -48,7 +46,7 @@ class ManageContactController extends Controller
      */
     public function store(Request $request)
     {
-
+        //
     }
 
     /**
@@ -68,13 +66,12 @@ class ManageContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-      $manages = ManageContact::find($id);
-      if(!$manages){
-          abort(503);
-      }
-      return view('admin.contactEdit')->with('manages',$manages);
+      // $data = Auth::User()->get();
+      // $getprofile = DB::table('users')->where('id','=', $data);
+      // dd($data);
+      return view('admin.editProfile');
     }
 
     /**
@@ -86,13 +83,17 @@ class ManageContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $manages = ManageContact::find($id);
-      $manages->contact_name = $request->contact_name;
-      $manages->contact_type = $request->contact_type;
-      $manages->contact_desc = $request->contact_desc;
-      $manages->save();
-
-      return redirect('contactPageAdmin')->with('message','data berhasil ditambahkan!!');
+        $manage = Auth::user();
+        $manage->name = $request->name;
+        $manage->email = $request->email;
+        if($request->password == ''){
+          $getoldpass = Auth::User()->password;
+          $manage->password = $getoldpass;
+        }else{
+          $manage->password = bcrypt($request['password']);
+        }
+        $manage->save();
+        return redirect('admin')->with('alert','Profil Berhasil di Update!');
     }
 
     /**

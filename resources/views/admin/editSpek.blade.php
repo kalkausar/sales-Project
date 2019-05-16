@@ -22,17 +22,16 @@
         <div class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Edit Spesifikasi</h3>
+            {{csrf_field()}}
           </div>
           <!-- /.box-header -->
           <div class="box-body">
             <div class="form-group">
               <label>Pilih Jenis Produk</label>
               <select class="form-control">
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-                <option>option 4</option>
-                <option>option 5</option>
+                @foreach ($managesproduct as $m)
+                <option value="{{$m->id}}">{{$m->product_name}}</option>
+                @endforeach
               </select>
             </div>
             <!-- row 1 -->
@@ -43,7 +42,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <label>Tipe Mesin</label>
                       <div class="form-group">
-                        <input type="text" name="tipe_mesin" id="tipe_mesin" class="form-control" placeholder="Tipe Mesin" style="width:200%">
+                        <input type="text" name="tipe_mesin" id="tipe_mesin" class="form-control" placeholder="Tipe Mesin" value="value="{{$manages->product_name}}"" style="width:200%">
                       </div>
                     </div>
                   </div>

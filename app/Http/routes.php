@@ -33,6 +33,9 @@ Route::get('discount', function () {
     return view('frontend.discount');
 });
 
+//ManageProfile
+Route::get('editProfile','ManageProfileController@edit');
+Route::put('editProfile/{id}','ManageProfileController@update');
 
 //ManageSpecification
 Route::get('spekPageAdmin','ManageSpecificationController@index');
@@ -73,8 +76,7 @@ Route::get('contactPageAdmin/{id}/edit','ManageContactController@edit');
 Route::put('contactPageAdmin/{id}','ManageContactController@update');
 
 // Authentication routes...
-Route::get('moshimoshi', 'Auth\AuthController@getLogin');
-Route::post('moshimoshi', 'Auth\AuthController@postLogin');
-Route::get('logout', 'Auth\AuthController@logout');
-
-Route::post('moshimoshi/postLogin','Auth\AuthController@postLogin');
+Route::get('moshimoshi',['as' => 'moshimoshi','uses'=>'LoginController@index']);
+Route::get('dashboard', 'AuthController@getRoot');
+Route::post('moshimoshi/postLogin', 'LoginController@postLogin');
+Route::get('logout', 'LoginController@logout');

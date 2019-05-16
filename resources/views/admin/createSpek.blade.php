@@ -30,8 +30,8 @@
             <div class="form-group">
               <label>Pilih Jenis Produk</label>
               <select class="form-control">
-                @foreach ($manages as $manage)
-                <option value="{{$manage->product_name}}">{{$manage->product_name}}</option>
+                @foreach ($managesproduct as $m)
+                <option value="{{$m->id}}">{{$m->product_name}}</option>
                 @endforeach
               </select>
             </div>

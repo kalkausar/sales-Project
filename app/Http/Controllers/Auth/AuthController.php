@@ -10,7 +10,6 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
 class AuthController extends Controller
@@ -26,12 +25,7 @@ class AuthController extends Controller
     |
     */
     public function index(){
-        if(!Session::get('login')){
-            return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-        }
-        else{
-            return view('admin.indexAdmin');
-        }
+      return view('admin.indexAdmin');
     }
 
 
@@ -82,38 +76,20 @@ class AuthController extends Controller
 
     }
     public function postLogin(Request $request){
-      $email = $request->email;
-        $password = $request->password;
+      if(Auth::attempt ([
+        'email' => $request->email,
+        'password' => $request->password
+      ]))
+      {
+        return redirect('admin')->with('alert','Anda Berhasil Login!');
+      }
+      else{
+        return Redirect::back()->with('alert','Password atau Email, Salah !');
+      }
+    }
 
-        $data = User::where('email',$email)->first();
-        if($data){ //apakah email tersebut ada atau tidak
-            if(Hash::check($password,$data->password)){
-                Session::put('name',$data->name);
-                Session::put('email',$data->email);
-                Session::put('login',TRUE);
-                return redirect('admin');
-            }
-            else{
-                return redirect('moshimoshi')->with('alert','Password atau Email, Salah !');
-            }
-        }
-        else{
-            return redirect('moshimoshi')->with('alert','Password atau Email, Salah!');
-        }
-      // if (Auth::attempt ([
-      //   'email'=> $request->email,
-      //   'password'=> $request->password
-      // ]))
-      // {
-      //   return view('admin.index2');
-      // }
-      // else{
-      //   return Redirect::back();
-      //       }
-
-}
-public function logout(){
-        Session::flush();
+public function logout(Request $request){
+        Auth::logout();
         return redirect('moshimoshi')->with('alert','Kamu sudah logout');
     }
 }

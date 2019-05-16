@@ -5,22 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ManageSlider;
 use App\Http\Requests;
+use DB;
+use Auth;
+use Response;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class ManageSliderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  public function getRoleAdmin() {
+      $rolesyangberhak = DB::table('roles')->where('id','=','1')->first()->namaRule;
+      return $rolesyangberhak;
+  }
+  public function __construct()
+  {
+      $this->middleware('auth');
+      $this->middleware('rule:'.$this->getRoleAdmin().',nothingelse');
+  }
     public function index()
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
       $manages = ManageSlider::all();
       return view('admin.indexAdmin', ['manages'=>$manages]);
     }
@@ -32,9 +36,6 @@ class ManageSliderController extends Controller
      */
     public function create()
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
       return view('admin.createSlider');
     }
 
@@ -94,9 +95,6 @@ class ManageSliderController extends Controller
      */
     public function edit($id)
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
       $manages = ManageSlider::find($id);
       return view('admin.editSlider', ['manages'=>$manages]);
     }

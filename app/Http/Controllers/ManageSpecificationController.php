@@ -3,29 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
-use App\Http\Requests;
 use App\ManageSpecification;
+use App\Http\Requests;
+use DB;
+use Auth;
+use Respond;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 
 class ManageSpecificationController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  public function getRoleAdmin() {
+      $rolesyangberhak = DB::table('roles')->where('id','=','1')->first()->namaRule;
+      return $rolesyangberhak;
+  }
+  public function __construct()
+  {
+      $this->middleware('auth');
+      $this->middleware('rule:'.$this->getRoleAdmin().',nothingelse');
+  }
     public function index()
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
       $manages = ManageSpecification::all();
-      $manages = DB::table('tb_product')->get();
-      return view('admin.spek', ['manages'=>$manages]);
+      $managesproduct = DB::table('tb_product')->get();
+      return view('admin.spek')->with(compact('manages'));
     }
 
     /**
@@ -35,11 +38,8 @@ class ManageSpecificationController extends Controller
      */
     public function create()
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
-      $manages = DB::table('tb_product')->get();
-      return view('admin.createSpek',['manages'=>$manages]);
+      $managesproduct = DB::table('tb_product')->get();
+      return view('admin.createSpek')->with(compact('managesproduct'));
     }
 
     /**
@@ -107,11 +107,9 @@ class ManageSpecificationController extends Controller
      */
     public function edit($id)
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
       $manages = ManageSpecification::find($id);
-      return view('admin.editspek', ['manages'=>$manages]);
+      $managesproduct = DB::table('tb_product')->get();
+      return view('admin.editspek')->with(compact('manages','managesproduct'));
     }
 
     /**

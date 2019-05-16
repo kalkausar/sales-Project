@@ -53,23 +53,26 @@
           <span class="sr-only">Toggle navigation</span>
         </a>
         <!-- Navbar Right Menu -->
+        <form action="/logout" method="post">
+          {{ csrf_field() }}
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <img src="{{url('cssadmin/dist/img/user.png')}}" class="user-image" alt="User Image">
-                <span class="hidden-xs">{{Session::get('name')}}</span>
+                <span class="hidden-xs">{{Auth::User()->name}}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- Menu Footer-->
                 <li class="user-footer">
-                  <a class="dropdown-item" href="#">Edit Profile</a>
+                  <a class="dropdown-item" href="/editProfile">Edit Profile</a>
                   <a class="dropdown-item" href="/logout">Logout</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
+        </form>
 
       </nav>
     </header>
@@ -83,7 +86,7 @@
             <img src="{{url('cssadmin/dist/img/user.png')}}" class="img-circle" alt="User Image">
           </div>
           <div class="pull-left info">
-            <p>{{Session::get('name')}}</p>
+            <p>{{Auth::User()->name}}</p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
@@ -114,6 +117,7 @@
     @yield('createSpek')
     @yield('editSpek')
     @yield('404')
+    @yield('editProfile')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

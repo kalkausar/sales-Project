@@ -6,22 +6,25 @@ use Illuminate\Http\Request;
 use App\ManageProduct;
 use App\Http\Requests;
 use DB;
+use Auth;
+use Respond;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class ManageProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  public function getRoleAdmin() {
+      $rolesyangberhak = DB::table('roles')->where('id','=','1')->first()->namaRule;
+      return $rolesyangberhak;
+  }
+  public function __construct()
+  {
+      $this->middleware('auth');
+      $this->middleware('rule:'.$this->getRoleAdmin().',nothingelse');
+  }
      public function index()
    {
-     if(!Session::get('login')){
-         return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-     }
      $manages = ManageProduct::all();
      return view('admin.produk', ['manages'=>$manages]);
    }
@@ -33,9 +36,6 @@ class ManageProductController extends Controller
      */
      public function create()
      {
-       if(!Session::get('login')){
-           return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-       }
        return view('admin.createProduk');
      }
 
@@ -95,9 +95,6 @@ class ManageProductController extends Controller
      */
     public function edit($id)
     {
-      if(!Session::get('login')){
-          return redirect('moshimoshi')->with('alert','Kamu harus login dulu');
-      }
       $manages = ManageProduct::find($id);
       return view('admin.editProduk', ['manages'=>$manages]);
     }

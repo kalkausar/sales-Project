@@ -24,13 +24,14 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <a class="btn btn-success" href="spekPageAdmin/createSpecification" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Spesifikasi</a>
-            <h3>Spesifikasi</h3>
+            <!-- <a class="btn btn-success" href="spekPageAdmin/createSpecification" role="button"><i class="fa fa-plus-circle" style="margin-right:5%"></i>Tambah Spesifikasi</a> -->
+            <h3>Daftar Produk</h3>
             <table class="table table-striped">
               <thead>
                 <tr>
                   <th scope="col">Id</th>
                   <th scope="col">Nama Produk</th>
+                  <th scope="col">Tipe</th>
                   <th scope="col">Status</th>
                   <th scope="col">Aksi</th>
                 </tr>
@@ -40,12 +41,9 @@
                 <tr>
                   <th scope="row">{{$manage->id}}</th>
                   <td>{{$manage->product_name}}</td>
+                  <td>{{$manage->product_type}}</td>
                   <td><span class="label label-default">Aktif</span></td>
                   <td><a class="label label-primary" href="/spekPageAdmin/{{$manage->id}}">Edit</a></td>
-                  <form class="" action="/deletespec/{{$manage->id}}" method="post">
-                    {{csrf_field()}}
-                    <input type="hidden" name="_method" value="put">
-                  <td><button class="btn btn-block btn-danger btn-xs" style="width:30%" type="submit" name="name">Delete</button></td>
                 </form>
                 </tr>
                 @endforeach

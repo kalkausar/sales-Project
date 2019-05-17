@@ -38,12 +38,11 @@ Route::get('editProfile','ManageProfileController@edit');
 Route::put('editProfile/{id}','ManageProfileController@update');
 
 //ManageSpecification
-Route::get('spekPageAdmin','ManageSpecificationController@index');
+Route::get('spekPageAdmin','ManageProductController@indexSpec');
 Route::get('spekPageAdmin/createSpecification','ManageSpecificationController@create');
 Route::post('addspec','ManageSpecificationController@store');
-Route::get('spekPageAdmin/{id}','ManageSpecificationController@edit');
-Route::put('spekPageAdmin/{id}/edit','ManageSpecificationController@update');
-Route::put('deletespec/{id}/','ManageSpecificationController@destroy');
+Route::get('spekPageAdmin/{id}','ManageProductController@editSpek');
+Route::put('spekPageAdmin/{id}/edit','ManageProductController@updateSpek');
 
 //ManageSlider
 Route::get('admin','ManageSliderController@index');

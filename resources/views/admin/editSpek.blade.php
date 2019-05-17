@@ -22,18 +22,21 @@
         <div class="box">
           <div class="box-header with-border">
             <h3 class="box-title">Edit Spesifikasi</h3>
-            {{csrf_field()}}
           </div>
           <!-- /.box-header -->
           <div class="box-body">
+            <form class="" action="/spekPageAdmin/{{$manages->id}}/edit" method="post">
+              {{csrf_field()}}
             <div class="form-group">
-              <label>Pilih Jenis Produk</label>
-              <select class="form-control">
-                @foreach ($managesproduct as $m)
-                <option value="{{$m->id}}">{{$m->product_name}}</option>
-                @endforeach
-              </select>
+              <label>Nama Produk</label>
+              <input type="text" class="form-control" name=product_name id=product_name value="{{$manages->product_name}}" disabled>
             </div>
+
+            <div class="form-group">
+              <label>Jenis Produk</label>
+              <input type="text" class="form-control" name=product_type id=product_type value="{{$manages->product_type}}" disabled>
+            </div>
+
             <!-- row 1 -->
             <div class="row">
               <div class="col-xs-12 col-sm-6 col-md-6">
@@ -42,7 +45,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <label>Tipe Mesin</label>
                       <div class="form-group">
-                        <input type="text" name="tipe_mesin" id="tipe_mesin" class="form-control" placeholder="Tipe Mesin" value="value="{{$manages->product_name}}"" style="width:200%">
+                        <input type="text" name="tipe_mesin" id="tipe_mesin" class="form-control" placeholder="Tipe Mesin" value="{{$manages->tipe_mesin}}" style="width:200%">
                       </div>
                     </div>
                   </div>
@@ -121,9 +124,9 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Bahan Bakar</label>
+                      <label>Jenis Bahan Bakar</label>
                       <div class="form-group">
-                        <input type="text" name="bahan_bakar" id="bahan_bakar" class="form-control" placeholder="Bahan Bakar" style="width:200%">
+                        <input type="text" name="bahan_bakar_jenis" id="bahan_bakar_jenis" class="form-control" placeholder="(Solar / Bensin)" style="width:200%">
                       </div>
                     </div>
                   </div>
@@ -148,9 +151,9 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Kapasitas Tangki</label>
+                      <label>Sistem Bahan Bakar</label>
                       <div class="form-group">
-                        <input type="text" name="kapasitas_tangki" id="kapasitas_tangki" class="form-control" placeholder="Kapasitas Tangki" style="width:200%">
+                        <input type="text" name="bahan_bakar_sistem" id="bahan_bakar_sistem" class="form-control" placeholder="Sistem Bahan Bakar" style="width:200%">
                       </div>
                     </div>
                   </div>
@@ -175,9 +178,9 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Diameter X Langkah</label>
+                      <label>Kapasitas Tangki</label>
                       <div class="form-group">
-                        <input type="text" name="diameterXlangkah" id="diameterXlangkah" class="form-control" placeholder="Diameter X Langkah" style="width:200%">
+                        <input type="text" name="kapasitas_tangki" id="kapasitas_tangki" class="form-control" placeholder="(Linter)" style="width:200%">
                       </div>
                     </div>
                   </div>
@@ -202,21 +205,22 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Daya Maksimum</label>
+                      <label>Diameter X Langkah</label>
                       <div class="form-group">
-                        <input type="text" name="dayaMax" id="dayaMax" class="form-control" placeholder="Daya Maximum" style="width:200%">
+                        <input type="text" name="diameterXlangkah" id="diameterXlangkah" class="form-control" placeholder="mm x mm" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                       <label>Rasio Gear Reverse</label>
                       <div class="form-group">
-                        <input type="text" name="rasio_reverse" id="rasio_reverse" class="form-control" placeholder="Rasio Gear Reverse" style="width:200%">
+                        <input type="text" name="rasio_reverse" id="rasio_reverse" class="form-control" placeholder="Rasio Gear Reverse (mundur)" style="width:200%">
                       </div>
                     </div>
                   </div>
@@ -229,14 +233,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Panjang</label>
+                      <label>Daya Maksimum</label>
                       <div class="form-group">
-                        <input type="text" name="panjang" id="panjang" class="form-control" placeholder="Panjang" style="width:200%">
+                        <input type="text" name="dayaMax" id="dayaMax" class="form-control" placeholder="(ps/RPM)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -256,14 +261,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Lebar</label>
+                      <label>Panjang</label>
                       <div class="form-group">
-                        <input type="text" name="lebar" id="lebar" class="form-control" placeholder="Lebar" style="width:200%">
+                        <input type="text" name="panjang" id="panjang" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -283,14 +289,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Tinggi</label>
+                      <label>Lebar</label>
                       <div class="form-group">
-                        <input type="text" name="tinggi" id="tinggi" class="form-control" placeholder="Tinggi" style="width:200%">
+                        <input type="text" name="lebar" id="lebar" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -310,14 +317,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Jarak Sumbu (mm)</label>
+                      <label>Tinggi</label>
                       <div class="form-group">
-                        <input type="text" name="jarak_sumbu" id="jarak_sumbu" class="form-control" placeholder="Jarak Sumbu" style="width:200%">
+                        <input type="text" name="tinggi" id="tinggi" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -337,14 +345,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Jarak Pijak Depan</label>
+                      <label>Jarak Sumbu (mm)</label>
                       <div class="form-group">
-                        <input type="text" name="pijak_depan" id="pijak_depan" class="form-control" placeholder="Jarak Pijak Depan" style="width:200%">
+                        <input type="text" name="jarak_sumbu" id="jarak_sumbu" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -364,14 +373,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Jarak Pijak Belakang</label>
+                      <label>Jarak Pijak Depan</label>
                       <div class="form-group">
-                        <input type="text" name="pijak_belakang" id="pijak_belakang" class="form-control" placeholder="Jarak Pijak Belakang" style="width:200%">
+                        <input type="text" name="pijak_depan" id="pijak_depan" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -391,14 +401,15 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Jarak Terendah</label>
+                      <label>Jarak Pijak Belakang</label>
                       <div class="form-group">
-                        <input type="text" name="jarak_terendah" id="jarak_terendah" class="form-control" placeholder="Jarak Terendah" style="width:200%">
+                        <input type="text" name="pijak_belakang" id="pijak_belakang" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="col-xs-12 col-sm-6 col-md-6">
                 <div class="form-group">
                   <div class="row">
@@ -418,9 +429,9 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
-                      <label>Ukuran Ban</label>
+                      <label>Jarak Terendah</label>
                       <div class="form-group">
-                        <input type="text" name="ukuran_ban" id="ukuran_ban" class="form-control" placeholder="Ukuran Ban" style="width:200%">
+                        <input type="text" name="jarak_terendah" id="jarak_terendah" class="form-control" placeholder="(mm)" style="width:200%">
                       </div>
                     </div>
                   </div>
@@ -430,7 +441,23 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
+                      <label>Jenis Velg dan Ukuran Ban</label>
                       <div class="form-group">
+                        <input type="text" name="ukuran_ban" id="ukuran_ban" class="form-control" placeholder="Velg, Ukuran Ban" style="width:200%">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row 16 -->
+            <div class=row>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                      <div class="form-group">
+                        <input type="hidden" name="_method" value="put">
                         <button class="btn btn-primary" type="submit" id="">Save</a></button>
                       </div>
                     </div>
@@ -439,6 +466,7 @@
               </div>
             </div>
             <!-- ./box-body -->
+          </form>
           </div>
           <!-- /.box -->
         </div>
@@ -447,6 +475,7 @@
       <!-- /.row -->
   </section>
   <!-- /.content -->
+</form>
 </div>
 <!-- /.row -->
 

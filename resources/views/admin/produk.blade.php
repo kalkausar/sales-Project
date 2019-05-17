@@ -31,6 +31,7 @@
                 <tr>
                   <th scope="col">Id</th>
                   <th scope="col">Nama Produk</th>
+                  <th scope="col">Tipe Produk</th>
                   <th scope="col">Deskripsi</th>
                   <th scope="col">Status</th>
                   <th scope="col">Aksi</th>
@@ -41,6 +42,7 @@
                 <tr>
                   <th scope="row">{{$manage->id}}</th>
                   <td>{{$manage->product_name}}</td>
+                  <td>{{$manage->product_type}}</td>
                   <td>{{$manage->product_desc}}</td>
                   <td><span class="label label-default">Aktif</span></td>
                   <td><a class="label label-primary" href="/produkPageAdmin/{{$manage->id}}">Edit</a></td>

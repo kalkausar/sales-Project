@@ -37,6 +37,13 @@
                 <label>Nama Produk</label>
                 <input type="text" class="form-control" name=product_name id=product_name placeholder="Ex: Mitsubishi Expander">
               </div>
+          <!-- tipe produk -->
+
+          <div class="form-group">
+            <label>Tipe Produk</label>
+            <input type="text" class="form-control" name=product_type id=product_type placeholder="Tipe Produk">
+          </div>
+
               <!-- textarea -->
               <div class="form-group">
                 <label>Deskripsi</label>

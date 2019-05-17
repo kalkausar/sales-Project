@@ -28,7 +28,7 @@ class ManageSpecificationController extends Controller
     {
       $manages = ManageSpecification::all();
       $managesproduct = DB::table('tb_product')->get();
-      return view('admin.spek')->with(compact('manages'));
+      return view('admin.spek')->with(compact('manages','managesproduct'));
     }
 
     /**

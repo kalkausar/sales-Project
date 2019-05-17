@@ -4,7 +4,6 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
-  <form action="/addspec" enctype="multipart/form-data" method="post">
   <section class="content-header">
     <h1>
       Spesifikasi

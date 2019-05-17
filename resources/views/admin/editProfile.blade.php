@@ -36,8 +36,8 @@
                 <input type="email" class="form-control" name="email" id="email" value="{{Auth::User()->email}}">
               </div>
               <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+                <label>New Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="New Password">
               </div>
               <input type="hidden" name="_method" value="put">
               <button class="btn btn-primary" type="submit" id="">Save</a></button>

@@ -41,7 +41,7 @@
       <!-- Logo -->
       <a href="/admin" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini"><b>A</b>LT</span>
+        <span class="logo-mini"><b>ADM</b></span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg"><b>Admin</b>Mitsubishi</span>
       </a>
@@ -123,7 +123,7 @@
       <div class="pull-right hidden-xs">
         <b>Version</b> 2.4.0
       </div>
-      <strong>Copyright &copy; 2019 <a href="https://adminlte.io" style="color:#3c8dbc">Project Ceunah Team</a>.</strong> All rights
+      <strong>Copyright &copy; 2019 <a style="color:#3c8dbc">Project Ceunah Team</a>.</strong> All rights
       reserved.
     </footer>
   </div>

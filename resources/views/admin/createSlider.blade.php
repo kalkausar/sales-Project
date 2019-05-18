@@ -29,6 +29,7 @@
             <div class="form-group">
               <label> Image </label> <br>
               <label> <b>*Hanya gambar yang dapat dimasukkan </b> </label> <br>
+              <label> <b>*Ukuran Gambar yang dianjurkan 1900x1300 pixel </b> </label> <br>
               <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes" name="tes">
             </div>
             <!-- text input -->

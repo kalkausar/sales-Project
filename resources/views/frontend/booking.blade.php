@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Travalers &mdash; Colorlib Website Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
-    <link rel="stylesheet" href="{{url('fonts/icomoon/style.css')}}">
+<head>
+  <title>Travalers &mdash; Colorlib Website Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{url('css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{url('css/jquery-ui.css')}}">
-    <link rel="stylesheet" href="{{url('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{url('css/owl.theme.default.min.css')}}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900|Display+Playfair:200,300,400,700">
+  <link rel="stylesheet" href="{{url('fonts/icomoon/style.css')}}">
 
-    <link rel="stylesheet" href="{{url('css/bootstrap-datepicker.css')}}">
+  <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url('css/magnific-popup.css')}}">
+  <link rel="stylesheet" href="{{url('css/jquery-ui.css')}}">
+  <link rel="stylesheet" href="{{url('css/owl.carousel.min.css')}}">
+  <link rel="stylesheet" href="{{url('css/owl.theme.default.min.css')}}">
 
-    <link rel="stylesheet" href="{{url('fonts/flaticon/font/flaticon.css')}}">
+  <link rel="stylesheet" href="{{url('css/bootstrap-datepicker.css')}}">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+  <link rel="stylesheet" href="{{url('fonts/flaticon/font/flaticon.css')}}">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 
 
-    <link rel="stylesheet" href="{{url('css/aos.css')}}">
+  <link rel="stylesheet" href="{{url('css/aos.css')}}">
 
-    <link rel="stylesheet" href="{{url('css/style.css')}}">
+  <link rel="stylesheet" href="{{url('css/style.css')}}">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
   <div class="site-wrap">
 
@@ -107,17 +109,17 @@
 
 
     <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
 
-            <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-              <h1 class="text-white font-weight-light">Book A Tour</h1>
-              <div><a href="/">Home</a> <span class="mx-2 text-white">&bullet;</span> <span class="text-white">Booking</span></div>
+          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
+            <h1 class="text-white font-weight-light">Book A Tour</h1>
+            <div><a href="/">Home</a> <span class="mx-2 text-white">&bullet;</span> <span class="text-white">Booking</span></div>
 
-            </div>
           </div>
         </div>
       </div>
+    </div>
 
 
 
@@ -282,9 +284,11 @@
             </div>
 
             <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;<script>
+                document.write(new Date().getFullYear());
+              </script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
           </div>
 
@@ -307,5 +311,6 @@
 
   <script src="{{url('js/main.js')}}"></script>
 
-  </body>
+</body>
+
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Travalers &mdash; Colorlib Website Template</title>
+  <title>Mitsubishi</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -47,7 +47,9 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-black h2 mb-0">Travelers</a></h1>
+            <a class="navbar-brand" href="/">
+              <img alt="Brand" style="width:100%; height:100%" src="{{url('images/logo-3.jpg')}}">
+            </a>
           </div>
           <div class="col-10 col-md-8 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right text-lg-center" role="navigation">
@@ -56,7 +58,7 @@
                 <li>
                   <a href="/">Home</a>
                 </li>
-                <li class="has-children">
+                <!-- <li class="has-children">
                   <a href="destination">Destinations</a>
                   <ul class="dropdown">
                     <li><a href="#">Japan</a></li>
@@ -64,11 +66,11 @@
                     <li><a href="#">China</a></li>
                     <li><a href="#">France</a></li>
                   </ul>
-                </li>
+                </li> -->
 
-                <li><a href="discount">Discount</a></li>
+                <li><a href="discount">Product</a></li>
                 <li><a href="about">About</a></li>
-                <li><a href="blog">Blog</a></li>
+                <!-- <li><a href="blog">Blog</a></li> -->
 
                 <li><a href="contact">Contact</a></li>
                 <!-- <li><a href="booking.html">Book Online</a></li> -->

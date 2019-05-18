@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+
 Route::get('destination', function () {
     return view('frontend.destination');
 });
@@ -32,6 +30,9 @@ Route::get('contact', function () {
 Route::get('discount', function () {
     return view('frontend.discount');
 });
+
+//FRONTEND
+Route::get('/','FrontendController@home');
 
 //ManageProfile
 Route::get('editProfile','ManageProfileController@edit');

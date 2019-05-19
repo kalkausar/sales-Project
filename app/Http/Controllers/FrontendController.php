@@ -20,4 +20,15 @@ class FrontendController extends Controller
     $slider = DB::table('tb_slider')->get();
     return view('index')->with(compact('slider'));
   }
+
+
+  public function about(){
+    $about = DB::table('tb_about')->get();
+    return view('frontend.about')->with('about',$about);
+  }
+
+  public function template(){
+    $template = DB::table('tb_about')->get();
+    return view('frontend.template')->with('template',$template);
+  }
 }

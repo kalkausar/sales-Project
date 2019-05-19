@@ -15,9 +15,9 @@
 Route::get('destination', function () {
     return view('frontend.destination');
 });
-Route::get('about', function () {
-    return view('frontend.about');
-});
+// Route::get('about', function () {
+//     return view('frontend.about');
+// });
 Route::get('blog', function () {
     return view('frontend.blog');
 });
@@ -33,6 +33,8 @@ Route::get('discount', function () {
 
 //FRONTEND
 Route::get('/','FrontendController@home');
+Route::get('about','FrontendController@about');
+Route::get('template','FrontendController@template');
 
 //ManageProfile
 Route::get('editProfile','ManageProfileController@edit');

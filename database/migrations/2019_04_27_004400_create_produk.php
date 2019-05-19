@@ -16,7 +16,7 @@ class CreateProduk extends Migration
       $table->increments('id');
       $table->string('product_name',55);
       $table->string('product_image')->nullable();
-      $table->string('product_desc')->nullable();
+      $table->longText('product_desc')->nullable();
       $table->string('product_type')->nullable();
       $table->string('tipe_mesin',55)->nullable();
       $table->integer('isi_silinder')->nullable();

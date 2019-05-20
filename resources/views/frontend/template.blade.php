@@ -95,45 +95,13 @@
   @yield('home')
   @yield('about')
 
-  <footer class="site-footer">
-    <d  iv class="container">
-
-        <div class="col-lg-4 mb-5 mb-lg-0">
-
-
-          <!-- <div class="mb-5">
-            <h3 class="footer-heading mb-2">Subscribe Newsletter</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit minima minus odio.</p>
-
-            <form action="#" method="post">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
-
-          </div> -->
-
-        </div>
-
-      </div>
-      <div class="row pt-5 mt-5 text-center">
-        <div class="col-md-12">
-          <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>
-              document.write(new Date().getFullYear());
-            </script> All rights reserved | This template is made with <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
-        </div>
-
-      </div>
+  <footer class="page-footer bg-dark">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center mx-3 py-3" style="color:#ffffff">Copyright © 2019 | This Template is made with
+      <i class="icon-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
     </div>
+    <!-- Copyright -->
   </footer>
-  </div>
 
   <script src="{{url('js/jquery-3.3.1.min.js')}}"></script>
   <script src="{{url('js/jquery-migrate-3.0.1.min.js')}}"></script>

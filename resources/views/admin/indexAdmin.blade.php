@@ -43,11 +43,13 @@
                   <td>{{$manage->slider_name}}</td>
                   <td>{{$manage->slider_name}}</td>
                   <td><span class="label label-default">Aktif</span></td>
-                  <td><a class="label label-primary" href="/admin/{{$manage->id}}">Edit</a></td>
-                  <form class="" action="/deleteslider/{{$manage->id}}" method="post">
+                  <td>
+                    <a class="label label-primary" href="/admin/{{$manage->id}}">Edit</a>
+                    <form class="" action="/deleteslider/{{$manage->id}}" method="post">
                     {{csrf_field()}}
                     <input type="hidden" name="_method" value="put">
-                  <td><button class="btn btn-block btn-danger btn-xs" style="width:30%" type="submit" name="name">Delete</button></td>
+                  <td><button class="btn btn-block btn-danger btn-xs" style="width:50%;" type="submit" name="name">Delete</button></td>
+                  </td>
                 </form>
                 </tr>
                 @endforeach

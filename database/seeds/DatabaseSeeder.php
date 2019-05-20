@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call(InputUserTable::class);
         $this->call(InputAboutContent::class);
+        $this->call(InputContactTable::class);
 
         Model::reguard();
     }

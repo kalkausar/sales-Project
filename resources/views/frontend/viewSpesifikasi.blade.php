@@ -29,7 +29,7 @@
               <p>col1.isi</p>
             </div>
             <div class="col-md">
-              <p>Isi Silinder</p>
+              <p>Jenis Transmisi</p>
             </div>
             <div class="col">
               <p>col2.isi</p>
@@ -38,13 +38,13 @@
           <!-- row2 -->
           <div class="row">
             <div class="col-md">
-              <p>Torsi Maximum</p>
+              <p>Isi Silinder</p>
             </div>
             <div class="col">
               <p>col1.isi</p>
             </div>
             <div class="col-md">
-              <p>Sistem Bahan Bakar</p>
+              <p>Rasio Gigi ke-1</p>
             </div>
             <div class="col">
               <p>col2.isi</p>
@@ -53,13 +53,13 @@
           <!-- row3 -->
           <div class="row">
             <div class="col-md">
-              <p>Jenis Bahan Bakar</p>
+              <p>Torsi</p>
             </div>
             <div class="col">
               <p>col1.isi</p>
             </div>
             <div class="col-md">
-              <p>Kapasitas Tangki</p>
+              <p>Rasio Gigi ke-2</p>
             </div>
             <div class="col">
               <p>col2.isi</p>
@@ -68,13 +68,13 @@
           <!-- row4 -->
           <div class="row">
             <div class="col-md">
-              <p>col1</p>
+              <p>Jenis Bahan Bakar</p>
             </div>
             <div class="col">
               <p>col1.isi</p>
             </div>
             <div class="col-md">
-              <p>col2</p>
+              <p>Rasio Gigi ke-3</p>
             </div>
             <div class="col">
               <p>col2.isi</p>
@@ -83,18 +83,178 @@
           <!-- row5 -->
           <div class="row">
             <div class="col-md">
-              <p>col1</p>
+              <p>Sistem Bahan Bakar</p>
             </div>
             <div class="col">
               <p>col1.isi</p>
             </div>
             <div class="col-md">
-              <p>col2</p>
+              <p>Rasio Gigi ke-4</p>
             </div>
             <div class="col">
               <p>col2.isi</p>
             </div>
           </div>
+          <!-- row6 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Kapasitas Tangki</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Rasio Gigi ke-5</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row7 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Diameter x Langkah</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Rasio Gigi Reverse</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row8 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Daya Maksimum</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Rasio Gear Akhir</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row9 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Panjang</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Suspensi Depan</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row10 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Lebar</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Suspensi Belakang</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row11 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Tinggi</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Rem Depan</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row12 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Jarak Sumbu (mm)</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Rem Belakang</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row13 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Jarak Pijak Depan</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Sistem Rem</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row14 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Jarak Pijak Belakang</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Sistem Penggerak Roda</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
+          <!-- row15 -->
+          <div class="row">
+            <div class="col-md">
+              <p>Jarak Terendah</p>
+            </div>
+            <div class="col">
+              <p>col1.isi</p>
+            </div>
+            <div class="col-md">
+              <p>Velg dan Ukuran Ban</p>
+            </div>
+            <div class="col">
+              <p>col2.isi</p>
+            </div>
+          </div>
+
 
         </div>
       </div>

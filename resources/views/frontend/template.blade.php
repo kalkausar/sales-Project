@@ -94,6 +94,7 @@
   @yield('destination')
   @yield('home')
   @yield('about')
+  @yield('spesifikasi')
 
   <footer class="page-footer bg-dark">
     <!-- Copyright -->

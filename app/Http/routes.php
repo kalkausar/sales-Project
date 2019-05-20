@@ -15,6 +15,9 @@
 Route::get('destination', function () {
     return view('frontend.destination');
 });
+Route::get('viewSpesifikasi', function () {
+    return view('frontend.viewSpesifikasi');
+});
 Route::get('blog', function () {
     return view('frontend.blog');
 });

@@ -17,12 +17,8 @@
 <div class="site-section bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 mb-5">
+      <div class="col-md-7 mb-5 bg-white">
 
-        <form action="#" class="p-5 bg-white">
-
-          
-        </form>
       </div>
 
       <div class="col-md-5">

@@ -24,15 +24,16 @@ Route::get('booking', function () {
 Route::get('contact', function () {
     return view('frontend.contact');
 });
-Route::get('discount', function () {
-    return view('frontend.discount');
-});
+// Route::get('discount', function () {
+//     return view('frontend.discount');
+// });
 
 //FRONTEND
 Route::get('/','FrontendController@home');
 Route::get('about','FrontendController@about');
 Route::get('template','FrontendController@template');
 Route::get('contact','FrontendController@contact');
+Route::get('product','FrontendController@product');
 
 //ManageProfile
 Route::get('editProfile','ManageProfileController@edit');

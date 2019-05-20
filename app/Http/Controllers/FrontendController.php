@@ -33,4 +33,10 @@ class FrontendController extends Controller
     $about = DB::table('tb_about')->get();
     return view('frontend.contact')->with(compact('contact','about'));
   }
+
+  public function product(){
+    $product = DB::table('tb_product')->get();
+    $about = DB::table('tb_about')->get();
+    return view('frontend.product')->with(compact('product','about'));
+  }
 }

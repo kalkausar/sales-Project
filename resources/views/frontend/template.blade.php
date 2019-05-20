@@ -68,7 +68,7 @@
                   </ul>
                 </li> -->
 
-                <li><a href="discount">Product</a></li>
+                <li><a href="product">Product</a></li>
                 <!-- <li><a href="about">About</a></li> -->
                 <!-- <li><a href="blog">Blog</a></li> -->
 

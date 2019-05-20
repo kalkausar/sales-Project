@@ -69,10 +69,10 @@
                 </li> -->
 
                 <li><a href="discount">Product</a></li>
-                <li><a href="about">About</a></li>
+                <!-- <li><a href="about">About</a></li> -->
                 <!-- <li><a href="blog">Blog</a></li> -->
 
-                <li><a href="contact">Contact</a></li>
+                <li><a href="contact">Contact Us</a></li>
                 <!-- <li><a href="booking.html">Book Online</a></li> -->
               </ul>
             </nav>
@@ -96,44 +96,7 @@
   @yield('about')
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-
-          <!-- <div class="mb-5">
-            <h3 class="footer-heading mb-4">About Travelers</h3>
-            <p></p>
-          </div> -->
-
-
-
-        </div>
-        <div class="col-lg-4 mb-5 mb-lg-0">
-          <div class="row mb-5">
-            <div class="col-md-12">
-              <h3 class="footer-heading mb-4">Navigations</h3>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-              </ul>
-            </div>
-            <div class="col-md-6 col-lg-6">
-              <ul class="list-unstyled">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Discounts</a></li>
-              </ul>
-            </div>
-          </div>
-
-
-
-        </div>
+    <d  iv class="container">
 
         <div class="col-lg-4 mb-5 mb-lg-0">
 

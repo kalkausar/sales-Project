@@ -48,7 +48,8 @@ class ManageContactController extends Controller
      */
     public function store(Request $request)
     {
-
+      $manages = ManageContact::all();
+      return view('admin.contact')->with(compact('manages'));
     }
 
     /**

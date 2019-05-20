@@ -18,17 +18,19 @@ class FrontendController extends Controller
 {
   public function home(){
     $slider = DB::table('tb_slider')->get();
-    return view('index')->with(compact('slider'));
+    $about = DB::table('tb_about')->get();
+    return view('index')->with(compact('slider','about'));
   }
-
 
   public function about(){
     $about = DB::table('tb_about')->get();
-    return view('frontend.about')->with('about',$about);
+    $contact = DB::table('tb_contact')->get();
+    return view('frontend.about')->with(compact('about','contact'));
   }
 
-  public function template(){
-    $template = DB::table('tb_about')->get();
-    return view('frontend.template')->with('template',$template);
+  public function contact(){
+    $contact = DB::table('tb_contact')->get();
+    $about = DB::table('tb_about')->get();
+    return view('frontend.contact')->with(compact('contact','about'));
   }
 }

@@ -61,12 +61,7 @@ class ManageAboutController extends Controller
 
           $manages = new ManageAbout;
           $manages->about_content = $request->about_content;
-          // $manages->about_image = $request->about_image;
           $manages->about_image = $lokasifileskr;
-          // $manages->id_category = 1;
-          // $manages->status = 1;
-          // $manages->slug = str_slug($request->title);
-          // $manages->keyword = $request->keyword;
           $manages->save();
 
       return redirect('admin.about')->with('message','data berhasil ditambahkan!!');
@@ -110,7 +105,7 @@ class ManageAboutController extends Controller
     {
       $manages = ManageAbout::find($id);
       $manages->about_content = $request->about_content;
-      // $manages->about_image = $request->about_image;
+      //$manages->about_image = $request->about_image;
       // $manages->id_category = 1;
       // $manages->status = 1;
       // $manages->slug = str_slug($request->title);
@@ -119,6 +114,8 @@ class ManageAboutController extends Controller
 
       return redirect('aboutPageAdmin')->with('message','data berhasil ditambahkan!!');
     }
+
+
 
     /**
      * Remove the specified resource from storage.

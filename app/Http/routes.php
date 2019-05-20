@@ -15,9 +15,6 @@
 Route::get('destination', function () {
     return view('frontend.destination');
 });
-// Route::get('about', function () {
-//     return view('frontend.about');
-// });
 Route::get('blog', function () {
     return view('frontend.blog');
 });
@@ -35,6 +32,7 @@ Route::get('discount', function () {
 Route::get('/','FrontendController@home');
 Route::get('about','FrontendController@about');
 Route::get('template','FrontendController@template');
+Route::get('contact','FrontendController@contact');
 
 //ManageProfile
 Route::get('editProfile','ManageProfileController@edit');
@@ -76,6 +74,7 @@ Route::get('testiPageAdmin','ManageTestiController@index');
 Route::get('contactPageAdmin','ManageContactController@index');
 Route::get('contactPageAdmin/{id}/edit','ManageContactController@edit');
 Route::put('contactPageAdmin/{id}','ManageContactController@update');
+Route::post('addContact','ManageContactController@store');
 
 // Authentication routes...
 Route::get('moshimoshi',['as' => 'moshimoshi','uses'=>'LoginController@index']);

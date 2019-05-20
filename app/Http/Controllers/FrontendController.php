@@ -19,7 +19,8 @@ class FrontendController extends Controller
   public function home(){
     $slider = DB::table('tb_slider')->get();
     $about = DB::table('tb_about')->get();
-    return view('index')->with(compact('slider','about'));
+    $product = DB::table('tb_product')->get();
+    return view('index')->with(compact('slider','about','product'));
   }
 
   public function about(){

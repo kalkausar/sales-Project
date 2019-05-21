@@ -12,8 +12,7 @@ class InputAboutContent extends Seeder
     public function run()
     {
         DB::table('tb_about')->insert([
-          'about_content' => 'this is about content, please change',
-          'about_image' => '\photosAbout\about.png'
+          'about_content' => 'this is about content, please change'
         ]);
     }
 }

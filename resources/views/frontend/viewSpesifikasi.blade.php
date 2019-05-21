@@ -12,7 +12,6 @@
     </div>
   </div>
 </div>
-
 <div class="site-section bg-light">
   <div class="container">
     <div class="row">
@@ -110,7 +109,6 @@
               <p>{!!$manages->rasio5!!}</p>
             </div>
           </div>
-
           <!-- row7 -->
           <div class="row">
             <div class="col-md">
@@ -126,7 +124,6 @@
               <p>{!!$manages->rasio_reverse!!}</p>
             </div>
           </div>
-
           <!-- row8 -->
           <div class="row">
             <div class="col-md">
@@ -142,7 +139,6 @@
               <p>{!!$manages->rasio_akhir!!}</p>
             </div>
           </div>
-
           <!-- row9 -->
           <div class="row">
             <div class="col-md">
@@ -158,7 +154,6 @@
               <p>{!!$manages->suspensi_depan!!}</p>
             </div>
           </div>
-
           <!-- row10 -->
           <div class="row">
             <div class="col-md">
@@ -174,7 +169,6 @@
               <p>{!!$manages->suspensi_belakang!!}</p>
             </div>
           </div>
-
           <!-- row11 -->
           <div class="row">
             <div class="col-md">
@@ -190,7 +184,6 @@
               <p>{!!$manages->rem_depan!!}</p>
             </div>
           </div>
-
           <!-- row12 -->
           <div class="row">
             <div class="col-md">
@@ -206,7 +199,6 @@
               <p>{!!$manages->rem_belakang!!}</p>
             </div>
           </div>
-
           <!-- row13 -->
           <div class="row">
             <div class="col-md">
@@ -222,7 +214,6 @@
               <p>{!!$manages->sistem_rem!!}</p>
             </div>
           </div>
-
           <!-- row14 -->
           <div class="row">
             <div class="col-md">
@@ -238,7 +229,6 @@
               <p>{!!$manages->sistem_penggerak!!}</p>
             </div>
           </div>
-
           <!-- row15 -->
           <div class="row">
             <div class="col-md">
@@ -254,13 +244,9 @@
               <p>{!!$manages->ukuran_ban!!}</p>
             </div>
           </div>
-
-
         </div>
       </div>
-
       <div class="col-md-5">
-
         <div class="p-4 mb-3 bg-white">
           <h2>Hubungi Kami</h2>
           @foreach ($contact as $c)
@@ -268,7 +254,6 @@
           <p><a href="#">{{$c->contact_desc}}</a></p>
           @endforeach
         </div>
-
       </div>
     </div>
   </div>

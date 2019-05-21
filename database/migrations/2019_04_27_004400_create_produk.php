@@ -48,6 +48,7 @@ class CreateProduk extends Migration
       $table->string('rem_belakang',25)->nullable();
       $table->string('sistem_rem',25)->nullable();
       $table->string('sistem_penggerak',25)->nullable();
+      $table->integer('harga_barang');
 
       $table->timestamps();
       $table->softDeletes();

@@ -56,24 +56,13 @@
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
                 <li>
-                  <a href="/">Home</a>
+                  <a href="/">Beranda</a>
                 </li>
-                <!-- <li class="has-children">
-                  <a href="destination">Destinations</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Japan</a></li>
-                    <li><a href="#">Europe</a></li>
-                    <li><a href="#">China</a></li>
-                    <li><a href="#">France</a></li>
-                  </ul>
-                </li> -->
 
-                <li><a href="/product">Product</a></li>
-                <!-- <li><a href="about">About</a></li> -->
-                <!-- <li><a href="blog">Blog</a></li> -->
+                <li><a href="/product">Produk</a></li>
 
-                <li><a href="/contact">Contact Us</a></li>
-                <!-- <li><a href="booking.html">Book Online</a></li> -->
+                <li><a href="/contact">Hubungi Kami</a></li>
+
               </ul>
             </nav>
           </div>
@@ -91,7 +80,6 @@
   @yield('product')
   @yield('contact')
   @yield('home')
-  @yield('about')
   @yield('spesifikasi')
 
   <footer class="page-footer bg-dark">

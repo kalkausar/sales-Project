@@ -37,6 +37,18 @@
                 <label>Nama Produk</label>
                 <input type="text" class="form-control" name=product_name id=product_name value="{{$manages->product_name}}" placeholder="Ex: Mitsubishi Expander">
               </div>
+              <!-- tipe produk -->
+
+              <div class="form-group">
+                <label>Tipe Produk</label>
+                <input type="text" class="form-control" name=product_type id=product_type placeholder="Tipe Produk" value="{{$manages->product_type}}">
+              </div>
+
+              <!-- harga produk -->
+              <div class="form-group">
+                <label>Harga Produk</label>
+                <input type="text" class="form-control" name=harga_barang id=harga_barang placeholder="Harga Produk" value="{{$manages->harga_barang}}">
+              </div>
               <!-- textarea -->
               <div class="form-group">
                 <label>Deskripsi</label>

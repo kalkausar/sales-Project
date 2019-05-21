@@ -20,8 +20,9 @@
         <a href="/spesifikasi/{{$pro->id}}" class="unit-1 text-center">
           <img src="{{$pro->product_image}}" alt="Image" class="img-fluid" style="width:350px; height:250px">
           <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block" class="text-white">Harga Mulai</strong>
-            <h3 class="unit-1-heading">{!!$pro->product_name!!} - {!!$pro->product_type!!}</h3>
+            <strong class="text-primary mb-2 d-block" class="text-white">Harga Mulai Rp. {!!$pro->harga_barang!!}</strong>
+            <h3 class="unit-1-heading">{!!$pro->product_name!!}</h3>
+            <h3 class="unit-1-heading">{!!$pro->product_type!!}</h3>
           </div>
         </a>
       </div>

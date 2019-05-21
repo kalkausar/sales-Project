@@ -100,6 +100,7 @@ class ManageProductController extends Controller
           $manages->rem_belakang = $request->rem_belakang;
           $manages->sistem_rem = $request->sistem_rem;
           $manages->sistem_penggerak = $request->sistem_penggerak;
+          $manages->harga_barang = $request->harga_barang;
 
           $manages->save();
 
@@ -183,6 +184,7 @@ class ManageProductController extends Controller
       $manages->rem_belakang = $request->rem_belakang;
       $manages->sistem_rem = $request->sistem_rem;
       $manages->sistem_penggerak = $request->sistem_penggerak;
+      $manages->harga_barang = $request->harga_barang;
 
       $manages->save();
       return redirect('produkPageAdmin')->with('message','data berhasil diupdate!!');

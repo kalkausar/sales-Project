@@ -3,7 +3,7 @@
 
 <div class="slide-one-item home-slider owl-carousel">
   @foreach ($slider as $s)
-  <div class="site-blocks-cover overlay" style="background-image: url({{$s->slider_image}});" data-aos="fade" data-stellar-background-ratio="0.5">
+  <div class="site-blocks-cover overlay" style="background-image: url('{{$s->slider_image}}');" data-aos="fade" data-stellar-background-ratio="0.5">
     <div class="container">
       <div class="row align-items-center justify-content-center text-center">
 

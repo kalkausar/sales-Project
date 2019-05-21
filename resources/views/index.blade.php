@@ -38,7 +38,9 @@
 
   <div class="container overlap-section">
     <div class="row">
+      <?php $count = 0; ?>
       @foreach ($product as $pro)
+      <?php if($count == 3) break; ?>
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
         <a href="#" class="unit-1 text-center">
           <img src="{{$pro->product_image}}" alt="Image" class="img-fluid">
@@ -47,6 +49,7 @@
           </div>
         </a>
       </div>
+      <?php $count++; ?>
       @endforeach
       <!-- <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
         <a href="#" class="unit-1 text-center">

@@ -38,7 +38,7 @@
                 @foreach ($manages as $manage)
                 <tr>
                   <th scope="row">{{$manage->id}}</th>
-                  <td>{{$manage->about_content}}</td>
+                  <td>{{str_limit($manage->about_content)}}</td>
                   <td><span class="label label-default">Aktif</span></td>
                   <td><a class="label label-primary" href="/aboutPageAdmin/{{$manage->id}}">Edit</a></td>
                 </form>

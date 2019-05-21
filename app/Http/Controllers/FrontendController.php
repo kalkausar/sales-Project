@@ -8,7 +8,7 @@ use DB;
 use ManageSlider;
 use ManageAbout;
 use ManageContact;
-use ManageProduct;
+use App\ManageProduct;
 use ManageSpecification;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -39,5 +39,12 @@ class FrontendController extends Controller
     $product = DB::table('tb_product')->get();
     $about = DB::table('tb_about')->get();
     return view('frontend.product')->with(compact('product','about'));
+  }
+
+  public function productDetail($id){
+    $product = DB::table('tb_product')->get();
+    $contact = DB::table('tb_contact')->get();
+    $manages = ManageProduct::find($id);
+    return view('frontend.viewSpesifikasi')->with(compact('product','contact','manages'));
   }
 }

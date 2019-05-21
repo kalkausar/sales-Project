@@ -11,32 +11,13 @@
 |
 */
 
-
-Route::get('destination', function () {
-    return view('frontend.destination');
-});
-Route::get('viewSpesifikasi', function () {
-    return view('frontend.viewSpesifikasi');
-});
-Route::get('blog', function () {
-    return view('frontend.blog');
-});
-Route::get('booking', function () {
-    return view('frontend.booking');
-});
-Route::get('contact', function () {
-    return view('frontend.contact');
-});
-// Route::get('discount', function () {
-//     return view('frontend.discount');
-// });
-
 //FRONTEND
 Route::get('/','FrontendController@home');
 Route::get('about','FrontendController@about');
 Route::get('template','FrontendController@template');
 Route::get('contact','FrontendController@contact');
 Route::get('product','FrontendController@product');
+Route::get('spesifikasi/{id}','FrontendController@productDetail');
 
 //ManageProfile
 Route::get('editProfile','ManageProfileController@edit');

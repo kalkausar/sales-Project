@@ -68,11 +68,11 @@
                   </ul>
                 </li> -->
 
-                <li><a href="product">Product</a></li>
+                <li><a href="/product">Product</a></li>
                 <!-- <li><a href="about">About</a></li> -->
                 <!-- <li><a href="blog">Blog</a></li> -->
 
-                <li><a href="contact">Contact Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
                 <!-- <li><a href="booking.html">Book Online</a></li> -->
               </ul>
             </nav>
@@ -88,10 +88,8 @@
   </header>
 
 
-  @yield('discount')
+  @yield('product')
   @yield('contact')
-  @yield('blog')
-  @yield('destination')
   @yield('home')
   @yield('about')
   @yield('spesifikasi')

@@ -17,19 +17,21 @@
 <div class="site-section bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-md-7 mb-5 bg-white">
-
+      @foreach ($about as $ab)
+      <div class="col-md-7 mb-5 bg-white text-center" style="padding:2%">
+        <h2>Tentang Kami</h2>
+        <p class="mb-4">{!!$ab->about_content!!}</p>
+        @endforeach
       </div>
 
       <div class="col-md-5">
-
-        <div class="p-4 mb-3 bg-white">
+        <div class="p-4 mb-3 bg-white" style="padding:2%">
+          <h2>Hubungi Kami</h2>
           @foreach ($contact as $c)
           <p class="mb-0 font-weight-bold">{{$c->contact_name}}</p>
           <p><a href="#">{{$c->contact_desc}}</a></p>
           @endforeach
         </div>
-
       </div>
     </div>
   </div>

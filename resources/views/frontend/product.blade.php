@@ -1,110 +1,37 @@
 @extends('frontend.template')
-@section('discount')
+@section('product')
 
 <div class="site-blocks-cover inner-page-cover" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
   <div class="container">
     <div class="row align-items-center justify-content-center text-center">
-
       <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
         <h1 class="text-white font-weight-light">Avail with Our Discounted Tours</h1>
         <div><a href="/">Home</a> <span class="mx-2 text-white">&bullet;</span> <span class="text-white">Discount</span></div>
-
       </div>
     </div>
   </div>
 </div>
 
-
-
-
 <div class="site-section">
-
   <div class="container">
-
     <div class="row">
-      <!-- <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/01-greece.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$590</del> <span class="mx-1 text-white ">&mdash;</span> $120</strong>
-            <h3 class="unit-1-heading">Santorini, Greece</h3>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-6 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/02-rome.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$390</del> <span class="mx-1 text-white ">&mdash;</span> $100</strong>
-            <h3 class="unit-1-heading">Rome, Italy</h3>
-          </div>
-        </a>
-      </div> -->
-@foreach ($product as $pro)
+      @foreach ($product as $pro)
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="{{$pro->product_image}}" alt="Image" class="img-fluid">
+        <a href="/spesifikasi/{{$pro->id}}" class="unit-1 text-center">
+          <img src="{{$pro->product_image}}" alt="Image" class="img-fluid" style="width:350px; height:250px">
           <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"class="text-white">{!!$pro->product_name!!}<span class="mx-1 text-white ">&mdash;</span> {!!$pro->product_type!!}</strong>
+            <strong class="text-primary mb-2 d-block" class="text-white">{!!$pro->product_name!!}<span class="mx-1 text-white ">&mdash;</span> {!!$pro->product_type!!}</strong>
             <!-- <h3 class="unit-1-heading">{!!$pro->product_desc!!}</h3> -->
           </div>
         </a>
       </div>
-        @endforeach
-      <!-- <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/02-rome.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$390</del> <span class="mx-1 text-white ">&mdash;</span> $100</strong>
-            <h3 class="unit-1-heading">Rome, Italy</h3>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/03-japan.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$490</del> <span class="mx-1 text-white ">&mdash;</span> $110</strong>
-            <h3 class="unit-1-heading">Mount Fuji, Japan</h3>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/04-dubai.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$320</del> <span class="mx-1 text-white ">&mdash;</span> $70</strong>
-            <h3 class="unit-1-heading">Camels, Dubai</h3>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/05-london.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$290</del> <span class="mx-1 text-white ">&mdash;</span> $50</strong>
-            <h3 class="unit-1-heading">Elizabeth Tower, London</h3>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-        <a href="#" class="unit-1 text-center">
-          <img src="images/06-australia.jpg" alt="Image" class="img-fluid">
-          <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block"><del class="text-white">$2,500</del> <span class="mx-1 text-white ">&mdash;</span> $500</strong>
-            <h3 class="unit-1-heading">Opera House, Australia</h3>
-          </div>
-        </a>
-      </div> -->
+      @endforeach
     </div>
   </div>
 
 </div>
 
 <div class="site-section block-13 bg-light">
-
-
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div class="col-md-7">

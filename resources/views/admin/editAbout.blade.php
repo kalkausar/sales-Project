@@ -30,14 +30,28 @@
               {{csrf_field()}}
               <div class="form-group">
                 <label>Konten About</label>
-                <textarea name="about_content">{{$manages->about_content}}</textarea>
+                <textarea id="about_content" name="about_content" class="form-control">{{$manages->about_content}}</textarea>
+                <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
                 <script>
-                  CKEDITOR.replace('about_content');
+                  var options = {
+                    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
+                  };
+                </script>
+                <script>
+                  CKEDITOR.replace('about_content', options);
+                </script>
+                <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
+                <script>
+                  $('textarea.about_content').ckeditor(options);
                 </script>
               </div>
               <input type="hidden" name="_method" value="put">
               <button class="btn btn-primary" type="submit" id="">Save</a></button>
-              </form>
+            </form>
           </div>
           <!-- ./box-body -->
         </div>

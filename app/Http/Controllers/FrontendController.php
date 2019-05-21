@@ -43,6 +43,7 @@ class FrontendController extends Controller
 
   public function productDetail($id){
     $product = DB::table('tb_product')->get();
+    // dd($product);
     $contact = DB::table('tb_contact')->get();
     $manages = ManageProduct::find($id);
     return view('frontend.viewSpesifikasi')->with(compact('product','contact','manages'));

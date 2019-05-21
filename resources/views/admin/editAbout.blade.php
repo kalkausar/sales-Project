@@ -29,13 +29,6 @@
             <form class="" action="/aboutPageAdmin/{{$manages->id}}/edit" method="post">
               {{csrf_field()}}
               <div class="form-group">
-
-                <label>Gambar About</label>
-                <!-- <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="update_about_img"  name="update_about_img"> -->
-                <img src="{!!$manages->about_image!!}" style="width:50%;height:50%" alt="photo">
-
-              </div>
-              <div class="form-group">
                 <label>Konten About</label>
                 <textarea name="about_content">{{$manages->about_content}}</textarea>
                 <script>

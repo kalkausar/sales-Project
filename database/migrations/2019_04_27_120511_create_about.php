@@ -15,7 +15,6 @@ class CreateAbout extends Migration
       Schema::create('tb_about', function (Blueprint $table) {
       $table->increments('id');
       $table->longText('about_content');
-      $table->string('about_image');
       $table->timestamps();
       $table->softDeletes();
       });

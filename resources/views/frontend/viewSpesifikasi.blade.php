@@ -18,6 +18,7 @@
       <div class="col-md-7 mb-5 bg-white">
         <div class="container" style="padding:5%">
           <h2 class="text-center">Spesifikasi Produk</h2>
+          <h3 class="text-center">{{$manages->product_name}} {{$manages->product_type}}</h3> <br>
 
           <!-- row1 -->
           <div class="row">
@@ -34,6 +35,8 @@
               <p>{!!$manages->transmisi!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row2 -->
           <div class="row">
             <div class="col-md">
@@ -49,6 +52,8 @@
               <p>{!!$manages->rasio1!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row3 -->
           <div class="row">
             <div class="col-md">
@@ -64,6 +69,8 @@
               <p>{!!$manages->rasio2!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row4 -->
           <div class="row">
             <div class="col-md">
@@ -79,6 +86,8 @@
               <p>{!!$manages->rasio3!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row5 -->
           <div class="row">
             <div class="col-md">
@@ -94,6 +103,8 @@
               <p>{!!$manages->rasio4!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row6 -->
           <div class="row">
             <div class="col-md">
@@ -109,6 +120,8 @@
               <p>{!!$manages->rasio5!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row7 -->
           <div class="row">
             <div class="col-md">
@@ -124,6 +137,8 @@
               <p>{!!$manages->rasio_reverse!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row8 -->
           <div class="row">
             <div class="col-md">
@@ -139,6 +154,8 @@
               <p>{!!$manages->rasio_akhir!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row9 -->
           <div class="row">
             <div class="col-md">
@@ -154,6 +171,8 @@
               <p>{!!$manages->suspensi_depan!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row10 -->
           <div class="row">
             <div class="col-md">
@@ -169,6 +188,8 @@
               <p>{!!$manages->suspensi_belakang!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row11 -->
           <div class="row">
             <div class="col-md">
@@ -184,6 +205,8 @@
               <p>{!!$manages->rem_depan!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row12 -->
           <div class="row">
             <div class="col-md">
@@ -199,6 +222,8 @@
               <p>{!!$manages->rem_belakang!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row13 -->
           <div class="row">
             <div class="col-md">
@@ -214,6 +239,8 @@
               <p>{!!$manages->sistem_rem!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row14 -->
           <div class="row">
             <div class="col-md">
@@ -229,6 +256,8 @@
               <p>{!!$manages->sistem_penggerak!!}</p>
             </div>
           </div>
+
+          <br>
           <!-- row15 -->
           <div class="row">
             <div class="col-md">

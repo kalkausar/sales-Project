@@ -19,19 +19,6 @@
     </div>
   </div>
   @endforeach
-  <!-- <div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-    <div class="container">
-      <div class="row align-items-center justify-content-center text-center">
-
-        <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-          <h1 class="text-white font-weight-light">Love The Places</h1>
-          <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga est inventore ducimus repudiandae.</p>
-          <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Book Now!</a></p>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
 </div>
 
 <div class="site-section">
@@ -45,7 +32,6 @@
         <a href="#" class="unit-1 text-center">
           <img src="{{$pro->product_image}}" alt="Image" class="img-fluid" style="width:350px; height:250px">
           <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block" class="text-white">Harga Mulai</strong>
             <h3 class="unit-1-heading">{!!$pro->product_name!!}</h3>
             <h3 class="unit-1-heading">{!!$pro->product_type!!}</h3>
           </div>
@@ -172,7 +158,7 @@
         <a href="/spesifikasi/{{$pro->id}}" class="unit-1 text-center">
           <img src="{{$pro->product_image}}" alt="Image" class="img-fluid" style="width:350px; height:250px">
           <div class="unit-1-text">
-            <strong class="text-primary mb-2 d-block" class="text-white">Harga Mulai</strong>
+            <strong class="text-primary mb-2 d-block" class="text-white">Harga Mulai {!!$pro->harga_barang!!}</strong>
             <h3 class="unit-1-heading">{!!$pro->product_name!!}</h3>
             <h3 class="unit-1-heading">{!!$pro->product_type!!}</h3>
           </div>

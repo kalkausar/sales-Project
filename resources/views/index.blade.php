@@ -45,7 +45,7 @@
 </div>
 
 
-<div class="site-section">
+<!-- <div class="site-section">
   <div class="container">
     <div class="row align-items-stretch">
       <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
@@ -81,7 +81,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="site-section block-13 bg-light">
   <div class="container">
@@ -170,7 +170,7 @@
 </div>
 
 
-<div class="site-section bg-light">
+<!-- <div class="site-section bg-light">
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div class="col-md-7 text-center">
@@ -244,6 +244,6 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 @endsection

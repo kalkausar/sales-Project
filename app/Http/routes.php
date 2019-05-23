@@ -54,6 +54,9 @@ Route::put('aboutPageAdmin/{id}/edit','ManageAboutController@update');
 
 //ManageTesti
 Route::get('testiPageAdmin','ManageTestiController@index');
+Route::get('testiPageAdmin/createTestimoni','ManageTestiController@create');
+Route::post('addtestimoni','ManageTestiController@store');
+Route::put('deletetestimoni/{id}/','ManageTestiController@destroy');
 
 //ManageContact
 Route::get('contactPageAdmin','ManageContactController@index');

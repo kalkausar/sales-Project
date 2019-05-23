@@ -18,6 +18,8 @@ class CreateTestimoni extends Migration
       $table->string('testimoni_name',30);
       $table->string('testimoni_job',30);
       $table->string('testimoni_image');
+      $table->timestamps();
+      $table->softDeletes();
       });
     }
 

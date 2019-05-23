@@ -20,7 +20,8 @@ class FrontendController extends Controller
     $slider = DB::table('tb_slider')->get();
     $about = DB::table('tb_about')->get();
     $product = DB::table('tb_product')->get();
-    return view('index')->with(compact('slider','about','product'));
+    $testi = DB::table('tb_testimoni')->get();
+    return view('index')->with(compact('slider','about','product','testi'));
   }
 
   public function about(){
@@ -38,7 +39,8 @@ class FrontendController extends Controller
   public function product(){
     $product = DB::table('tb_product')->get();
     $about = DB::table('tb_about')->get();
-    return view('frontend.product')->with(compact('product','about'));
+    $testi = DB::table('tb_testimoni')->get();
+    return view('frontend.product')->with(compact('product','about','testi'));
   }
 
   public function productDetail($id){

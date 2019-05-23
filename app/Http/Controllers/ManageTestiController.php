@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Managetesti;
 use App\Http\Requests;
 use DB;
 use Auth;
@@ -25,7 +25,8 @@ class ManageTestiController extends Controller
   }
     public function index()
     {
-      return view('admin.404');
+      $manages = ManageTesti::all();
+      return view('admin.testimoni')->with(compact('manages'));
     }
 
     /**
@@ -35,7 +36,7 @@ class ManageTestiController extends Controller
      */
     public function create()
     {
-        //
+      return view('admin.createTestimoni');
     }
 
     /**
@@ -46,7 +47,31 @@ class ManageTestiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      if ($request->hasFile('tes')) {
+         $namafile = $request->file('tes')->getClientOriginalName();
+         $ext = $request->file('tes')->getClientOriginalExtension();
+         $lokasifileskr = '/photosTestimoni/'.$namafile;
+         //cek jika file sudah ada...
+         if ($ext == "png" ||
+             $ext == "jpg")
+         {
+           $destinasi = public_path('/photosTestimoni');
+           $proses = $request->file('tes')->move($destinasi,$namafile);
+
+
+          $manages = new ManageTesti;
+          $manages->testimoni_string = $request->testimoni_string;
+          $manages->testimoni_name = $request->testimoni_name;
+          $manages->testimoni_image = $lokasifileskr;
+          $manages->testimoni_job = $request->testimoni_job;
+
+          $manages->save();
+
+      return redirect('testiPageAdmin')->with('message','data berhasil ditambahkan!!');
+    } else {
+             return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+           }
+         }
     }
 
     /**
@@ -91,6 +116,8 @@ class ManageTestiController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $manages = ManageTesti::find($id);
+      $manages->delete();
+      return redirect('testiPageAdmin')->with('message','data berhasil didelete!!');
     }
 }

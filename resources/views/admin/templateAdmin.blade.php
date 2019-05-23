@@ -118,6 +118,8 @@
     @yield('editSpek')
     @yield('404')
     @yield('editProfile')
+    @yield('Testimoni')
+    @yield('createTestimoni')
 
     <footer class="main-footer">
       <div class="pull-right hidden-xs">

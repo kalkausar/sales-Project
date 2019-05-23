@@ -27,6 +27,6 @@ class CreateAbout extends Migration
      */
     public function down()
     {
-        Schema::drop('tb_about');
+      //
     }
 }

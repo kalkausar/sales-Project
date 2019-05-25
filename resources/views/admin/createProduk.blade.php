@@ -32,6 +32,20 @@
                 <label> <b>*Hanya gambar yang dapat dimasukkan </b> </label> <br>
                 <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes" name="tes">
               </div>
+
+              <!-- image spek -->
+              <div class="form-group">
+                <label> Gambar Spesifikasi </label> <br>
+                <label> <b>*Hanya gambar yang dapat dimasukkan </b> </label> <br>
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes1" name="tes1">
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes2" name="tes2">
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes3" name="tes3">
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes4" name="tes4">
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes5" name="tes5">
+                <input type="file" accept="image/jpeg,image/tiff,image/x-png" id="tes6" name="tes6">
+              </div>
+              <!-- end image spek -->
+
               <!-- text input -->
               <div class="form-group">
                 <label>Nama Produk</label>

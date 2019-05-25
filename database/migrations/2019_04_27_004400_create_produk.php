@@ -16,6 +16,12 @@ class CreateProduk extends Migration
       $table->increments('id');
       $table->string('product_name',55);
       $table->string('product_image')->nullable();
+      $table->string('spek_image1')->nullable();
+      $table->string('spek_image2')->nullable();
+      $table->string('spek_image3')->nullable();
+      $table->string('spek_image4')->nullable();
+      $table->string('spek_image5')->nullable();
+      $table->string('spek_image6')->nullable();
       $table->longText('product_desc')->nullable();
       $table->string('product_type')->nullable();
       $table->string('tipe_mesin',55)->nullable();
@@ -49,6 +55,7 @@ class CreateProduk extends Migration
       $table->string('sistem_rem',25)->nullable();
       $table->string('sistem_penggerak',25)->nullable();
       $table->integer('harga_barang');
+
 
       $table->timestamps();
       $table->softDeletes();

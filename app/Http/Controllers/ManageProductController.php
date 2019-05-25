@@ -53,22 +53,59 @@ class ManageProductController extends Controller
      */
     public function store(Request $request)
     {
-      if ($request->hasFile('tes')) {
+        // product image
          $namafile = $request->file('tes')->getClientOriginalName();
          $ext = $request->file('tes')->getClientOriginalExtension();
          $lokasifileskr = '/photosProduct/'.$namafile;
+         // spek image1
+         $namafile = $request->file('tes1')->getClientOriginalName();
+         $ext = $request->file('tes1')->getClientOriginalExtension();
+         $lokasifileskr1 = '/photosProduct/'.$namafile;
+         // spek image2
+         $namafile = $request->file('tes2')->getClientOriginalName();
+         $ext = $request->file('tes2')->getClientOriginalExtension();
+         $lokasifileskr2 = '/photosProduct/'.$namafile;
+         // spek image3
+         $namafile = $request->file('tes3')->getClientOriginalName();
+         $ext = $request->file('tes3')->getClientOriginalExtension();
+         $lokasifileskr3 = '/photosProduct/'.$namafile;
+         // spek image4
+         $namafile = $request->file('tes4')->getClientOriginalName();
+         $ext = $request->file('tes4')->getClientOriginalExtension();
+         $lokasifileskr4 = '/photosProduct/'.$namafile;
+         // spek image5
+         $namafile = $request->file('tes5')->getClientOriginalName();
+         $ext = $request->file('tes5')->getClientOriginalExtension();
+         $lokasifileskr5 = '/photosProduct/'.$namafile;
+         // spek image5
+         $namafile = $request->file('tes6')->getClientOriginalName();
+         $ext = $request->file('tes6')->getClientOriginalExtension();
+         $lokasifileskr6 = '/photosProduct/'.$namafile;
+
          //cek jika file sudah ada...
          if ($ext == "png" ||
              $ext == "jpg")
          {
            $destinasi = public_path('/photosProduct');
            $proses = $request->file('tes')->move($destinasi,$namafile);
+           $proses = $request->file('tes1')->move($destinasi,$namafile);
+           $proses = $request->file('tes2')->move($destinasi,$namafile);
+           $proses = $request->file('tes3')->move($destinasi,$namafile);
+           $proses = $request->file('tes4')->move($destinasi,$namafile);
+           $proses = $request->file('tes5')->move($destinasi,$namafile);
+           $proses = $request->file('tes6')->move($destinasi,$namafile);
 
 
           $manages = new ManageProduct;
           $manages->product_name = $request->product_name;
           $manages->product_desc = $request->product_desc;
           $manages->product_image = $lokasifileskr;
+          $manages->spek_image1 = $lokasifileskr1;
+          $manages->spek_image2 = $lokasifileskr2;
+          $manages->spek_image3 = $lokasifileskr3;
+          $manages->spek_image4 = $lokasifileskr4;
+          $manages->spek_image5 = $lokasifileskr5;
+          $manages->spek_image6 = $lokasifileskr6;
           $manages->product_type = $request->product_type;
           $manages->tipe_mesin = $request->tipe_mesin;
           $manages->isi_silinder = $request->isi_silinder;
@@ -109,7 +146,6 @@ class ManageProductController extends Controller
              return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
            }
          }
-       }
 
     /**
      * Display the specified resource.

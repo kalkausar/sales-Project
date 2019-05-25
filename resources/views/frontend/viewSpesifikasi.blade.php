@@ -20,6 +20,54 @@
           <h2 class="text-center">Spesifikasi Produk</h2>
           <h3 class="text-center">{{$manages->product_name}} {{$manages->product_type}}</h3> <br>
 
+          <!-- image specification -->
+          <div class="row">
+            <div class="col-md-4 my-2">
+              <div class="thumbnail">
+                <a href="{!!$manages->spek_image1!!}">
+                  <img src="{!!$manages->spek_image1!!}" style="width:170px; height:108px">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="thumbnail">
+                <a href="{!!$manages->spek_image2!!}">
+                  <img src="{!!$manages->spek_image2!!}" style="width:170px; height:108px">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="thumbnail">
+                <a href="{!!$manages->spek_image3!!}">
+                  <img src="{!!$manages->spek_image3!!}" style="width:170px; height:108px">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="thumbnail">
+                <a href="{!!$manages->spek_image4!!}">
+                  <img src="{!!$manages->spek_image4!!}" style="width:170px; height:108px">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="thumbnail">
+                <a href="{!!$manages->spek_image5!!}">
+                  <img src="{!!$manages->spek_image5!!}" style="width:170px; height:108px">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-4 my-2">
+              <div class="thumbnail">
+                <a href="{!!$manages->spek_image6!!}">
+                  <img src="{!!$manages->spek_image6!!}" style="width:170px; height:108px">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <br>
+
           <!-- row1 -->
           <div class="row">
             <div class="col-md">

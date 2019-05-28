@@ -66,6 +66,7 @@ Route::post('addContact','ManageContactController@store');
 
 // Authentication routes...
 Route::get('moshimoshi',['as' => 'moshimoshi','uses'=>'LoginController@index']);
+Route::get('error', 'LoginController@error');
 Route::get('dashboard', 'AuthController@getRoot');
 Route::post('moshimoshi/postLogin', 'LoginController@postLogin');
 Route::get('logout', 'LoginController@logout');

@@ -34,4 +34,8 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('moshimoshi')->with('alert','Kamu sudah logout');
     }
+
+    public function error(){
+      return view('frontend.404');
+    }
 }

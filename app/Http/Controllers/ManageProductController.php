@@ -54,46 +54,167 @@ class ManageProductController extends Controller
     public function store(Request $request)
     {
         // product image
-         $namafile = $request->file('tes')->getClientOriginalName();
-         $ext = $request->file('tes')->getClientOriginalExtension();
-         $lokasifileskr = '/photosProduct/'.$namafile;
-         // spek image1
-         $namafile = $request->file('tes1')->getClientOriginalName();
-         $ext = $request->file('tes1')->getClientOriginalExtension();
-         $lokasifileskr1 = '/photosProduct/'.$namafile;
-         // spek image2
-         $namafile = $request->file('tes2')->getClientOriginalName();
-         $ext = $request->file('tes2')->getClientOriginalExtension();
-         $lokasifileskr2 = '/photosProduct/'.$namafile;
-         // spek image3
-         $namafile = $request->file('tes3')->getClientOriginalName();
-         $ext = $request->file('tes3')->getClientOriginalExtension();
-         $lokasifileskr3 = '/photosProduct/'.$namafile;
-         // spek image4
-         $namafile = $request->file('tes4')->getClientOriginalName();
-         $ext = $request->file('tes4')->getClientOriginalExtension();
-         $lokasifileskr4 = '/photosProduct/'.$namafile;
-         // spek image5
-         $namafile = $request->file('tes5')->getClientOriginalName();
-         $ext = $request->file('tes5')->getClientOriginalExtension();
-         $lokasifileskr5 = '/photosProduct/'.$namafile;
-         // spek image5
-         $namafile = $request->file('tes6')->getClientOriginalName();
-         $ext = $request->file('tes6')->getClientOriginalExtension();
-         $lokasifileskr6 = '/photosProduct/'.$namafile;
+        if($request -> tes == null){
+          $lokasifileskr = null;
+        }else{
+          $namafile = $request->file('tes')->getClientOriginalName();
+          $ext = $request->file('tes')->getClientOriginalExtension();
+          $lokasifileskr = '/photosProduct/'.$namafile;
+        //cek file sudah ada
+        if ($ext == "png" ||
+            $ext == "jpg")
+        {
+          $destinasi = public_path('/photosProduct');
+          $proses = $request->file('tes')->move($destinasi,$namafile);
+        }else{
+          return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+        }
+      }
 
-         //cek jika file sudah ada...
-         if ($ext == "png" ||
-             $ext == "jpg")
-         {
-           $destinasi = public_path('/photosProduct');
-           $proses = $request->file('tes')->move($destinasi,$namafile);
-           $proses = $request->file('tes1')->move($destinasi,$namafile);
-           $proses = $request->file('tes2')->move($destinasi,$namafile);
-           $proses = $request->file('tes3')->move($destinasi,$namafile);
-           $proses = $request->file('tes4')->move($destinasi,$namafile);
-           $proses = $request->file('tes5')->move($destinasi,$namafile);
-           $proses = $request->file('tes6')->move($destinasi,$namafile);
+        // spek image1
+        if($request -> tes1 == null){
+          $lokasifileskr1 = null;
+        }else{
+          $namafile = $request->file('tes1')->getClientOriginalName();
+          $ext = $request->file('tes1')->getClientOriginalExtension();
+          $lokasifileskr1 = '/photosProduct/'.$namafile;
+        //cek file sudah ada
+        if ($ext == "png" ||
+            $ext == "jpg")
+        {
+          $destinasi = public_path('/photosProduct');
+          $proses = $request->file('tes1')->move($destinasi,$namafile);
+        }else{
+          return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+        }
+      }
+
+      // spek image2
+      if($request -> tes2 == null){
+        $lokasifileskr2 = null;
+      }else{
+        $namafile = $request->file('tes2')->getClientOriginalName();
+        $ext = $request->file('tes2')->getClientOriginalExtension();
+        $lokasifileskr2 = '/photosProduct/'.$namafile;
+      //cek file sudah ada
+      if ($ext == "png" ||
+          $ext == "jpg")
+      {
+        $destinasi = public_path('/photosProduct');
+        $proses = $request->file('tes2')->move($destinasi,$namafile);
+      }else{
+        return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+      }
+    }
+
+      // spek image3
+      if($request -> tes3 == null){
+        $lokasifileskr3 = null;
+      }else{
+        $namafile = $request->file('tes3')->getClientOriginalName();
+        $ext = $request->file('tes3')->getClientOriginalExtension();
+        $lokasifileskr3 = '/photosProduct/'.$namafile;
+      //cek file sudah ada
+      if ($ext == "png" ||
+          $ext == "jpg")
+      {
+        $destinasi = public_path('/photosProduct');
+        $proses = $request->file('tes3')->move($destinasi,$namafile);
+      }else{
+        return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+      }
+    }
+
+      // spek image4
+      if($request -> tes4 == null){
+        $lokasifileskr4 = null;
+      }else{
+        $namafile = $request->file('tes4')->getClientOriginalName();
+        $ext = $request->file('tes4')->getClientOriginalExtension();
+        $lokasifileskr4 = '/photosProduct/'.$namafile;
+      //cek file sudah ada
+      if ($ext == "png" ||
+          $ext == "jpg")
+      {
+        $destinasi = public_path('/photosProduct');
+        $proses = $request->file('tes4')->move($destinasi,$namafile);
+      }else{
+        return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+      }
+    }
+
+      // spek image5
+      if($request -> tes5 == null){
+        $lokasifileskr5 = null;
+      }else{
+        $namafile = $request->file('tes5')->getClientOriginalName();
+        $ext = $request->file('tes5')->getClientOriginalExtension();
+        $lokasifileskr5 = '/photosProduct/'.$namafile;
+      //cek file sudah ada
+      if ($ext == "png" ||
+          $ext == "jpg")
+      {
+        $destinasi = public_path('/photosProduct');
+        $proses = $request->file('tes5')->move($destinasi,$namafile);
+      }else{
+        return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+      }
+    }
+
+        // spek image6
+        if($request -> tes6 == null){
+          $lokasifileskr6 = null;
+        }else{
+          $namafile = $request->file('tes6')->getClientOriginalName();
+          $ext = $request->file('tes6')->getClientOriginalExtension();
+          $lokasifileskr6 = '/photosProduct/'.$namafile;
+        //cek file sudah ada
+        if ($ext == "png" ||
+            $ext == "jpg")
+        {
+          $destinasi = public_path('/photosProduct');
+          $proses = $request->file('tes6')->move($destinasi,$namafile);
+        }else{
+          return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
+        }
+      }
+         // // spek image1
+         // $namafile = $request->file('tes1')->getClientOriginalName();
+         // $ext = $request->file('tes1')->getClientOriginalExtension();
+         // $lokasifileskr1 = '/photosProduct/'.$namafile;
+         // // spek image2
+         // $namafile = $request->file('tes2')->getClientOriginalName();
+         // $ext = $request->file('tes2')->getClientOriginalExtension();
+         // $lokasifileskr2 = '/photosProduct/'.$namafile;
+         // // spek image3
+         // $namafile = $request->file('tes3')->getClientOriginalName();
+         // $ext = $request->file('tes3')->getClientOriginalExtension();
+         // $lokasifileskr3 = '/photosProduct/'.$namafile;
+         // // spek image4
+         // $namafile = $request->file('tes4')->getClientOriginalName();
+         // $ext = $request->file('tes4')->getClientOriginalExtension();
+         // $lokasifileskr4 = '/photosProduct/'.$namafile;
+         // // spek image5
+         // $namafile = $request->file('tes5')->getClientOriginalName();
+         // $ext = $request->file('tes5')->getClientOriginalExtension();
+         // $lokasifileskr5 = '/photosProduct/'.$namafile;
+         // // spek image5
+         // $namafile = $request->file('tes6')->getClientOriginalName();
+         // $ext = $request->file('tes6')->getClientOriginalExtension();
+         // $lokasifileskr6 = '/photosProduct/'.$namafile;
+         //
+         // //cek jika file sudah ada...
+         // if ($ext == "png" ||
+         //     $ext == "jpg")
+         // {
+         //   $destinasi = public_path('/photosProduct');
+         //   $proses = $request->file('tes')->move($destinasi,$namafile);
+         //   $proses = $request->file('tes1')->move($destinasi,$namafile);
+         //   $proses = $request->file('tes2')->move($destinasi,$namafile);
+         //   $proses = $request->file('tes3')->move($destinasi,$namafile);
+         //   $proses = $request->file('tes4')->move($destinasi,$namafile);
+         //   $proses = $request->file('tes5')->move($destinasi,$namafile);
+         //   $proses = $request->file('tes6')->move($destinasi,$namafile);
 
 
           $manages = new ManageProduct;
@@ -142,10 +263,7 @@ class ManageProductController extends Controller
           $manages->save();
 
       return redirect('produkPageAdmin')->with('message','data berhasil ditambahkan!!');
-    } else {
-             return Redirect::back()->withErrors(['file tidak sesuai, tidak bisa diupload']);
-           }
-         }
+    }
 
     /**
      * Display the specified resource.
